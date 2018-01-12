@@ -176,7 +176,7 @@ int getPropertyProc(ClientData cd, Tcl_Interp *interp, int argc, const char** ar
 
 }
 
-int IcdeInit(ICDE* icde,Tcl_Interp* interp) {
+int Icde_Init(ICDE* icde,Tcl_Interp* interp) {
 
   Tcl_CreateCommand(interp,"readLef",readLefProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
   Tcl_CreateCommand(interp,"getDesigns",getDesignsProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
