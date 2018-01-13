@@ -47,7 +47,7 @@ int main(int argc,char** argv) {
     return 1;
   }
 
-  if ( options["format"] == "lef" || options["leffiles"] == "" ) {
+  if ( options["format"] == "def" && options["leffiles"] == "" ) {
     cout << "ERROR: Please specify library LEF files using -l option for reading a DEF" << endl;
     return 1;
   }
@@ -59,6 +59,8 @@ int main(int argc,char** argv) {
   } else if ( options["format"] == "def" ) {
     readLef(lib,options["leffiles"]);
     readDef(lib,options["filename"]);
+  } else if ( options["format"] == "verilog" ) {
+    readVerilog(lib,options["filename"]);
   } else {
     cout << "ERROR: Invalid file format specified. Use lef or def" << endl;
   }

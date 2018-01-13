@@ -96,7 +96,11 @@ proc gui::highlightInst { cpath x y } {
 }
 
 proc gui::fill_canvas { cpath } {
+
     global canvas_path
+
+    upvar 0 gui::settings([winfo toplevel $cpath],scale_factor) scale
+
     $cpath delete all
 
     $cpath configure -background black
@@ -110,9 +114,12 @@ proc gui::fill_canvas { cpath } {
     foreach inst [get_instances] {
         set shape [gui::draw_shape $cpath [$inst getBoundary] "instance"]
 	set ::inst_name($shape) [$inst getName]
-	set x [lindex [lindex [$inst getBBox] 0] 0]
-	set y [lindex [lindex [$inst getBBox] 0] 1]
-        $cpath create text $x $y -text [$inst getName] -fill white
+	set llx [lindex [lindex [$inst getBBox] 0] 0]
+	set lly [lindex [lindex [$inst getBBox] 0] 1]
+	set urx [lindex [lindex [$inst getBBox] 1] 0]
+	set ury [lindex [lindex [$inst getBBox] 1] 1]
+	set cxy [gui::transform "[expr ($llx + $urx) / 2] [expr ($lly + $ury) / 2]" $scale]
+        $cpath create text [lindex $cxy 0] [lindex $cxy 1] -text [$inst getName] -fill white
     }
     $cpath bind instance <Enter> {gui::highlightInst %W %x %y}
     $cpath bind instance <ButtonPress-1> {gui::selectInst %W %x %y}

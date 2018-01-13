@@ -3,6 +3,7 @@
 
 int readLef(Library*,string);
 int readDef(Library*,string);
+int readVerilog(Library*,string);
 
 #endif
 

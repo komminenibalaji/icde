@@ -179,6 +179,8 @@ int getPropertyProc(ClientData cd, Tcl_Interp *interp, int argc, const char** ar
 int Icde_Init(ICDE* icde,Tcl_Interp* interp) {
 
   Tcl_CreateCommand(interp,"readLef",readLefProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
+  Tcl_CreateCommand(interp,"readDef",readDefProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
+  Tcl_CreateCommand(interp,"readVerilog",readVerilogProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
   Tcl_CreateCommand(interp,"getDesigns",getDesignsProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
   Tcl_CreateCommand(interp,"loadDesign",loadDesignProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
   Tcl_CreateCommand(interp,"getProperty",getPropertyProc,(ClientData) icde,(Tcl_CmdDeleteProc *) NULL);
@@ -194,3 +196,4 @@ int Icde_Init(ICDE* icde,Tcl_Interp* interp) {
   return 0;
 
 }
+

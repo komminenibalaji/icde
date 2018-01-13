@@ -37,7 +37,7 @@ void def_error(const char *s);
 %token NONDEFAULTRULE
 %token TRACKS STEP LAYER DO
 %token COMPONENTS PLACED FIXED UNPLACED
-%token PINS
+%token PINS NET
 %token NETS ROUTED NEW PIN 
 %token SPECIALNETS RECT POLYGON SOURCE
 %token DIRECTION INPUT OUTPUT TRISTATE INOUT
@@ -100,7 +100,7 @@ dividechar:
 
 units:
     UNITS DISTANCE MICRONS NUMBER ';'
-    { def::scale_factor = 10.00; }
+    { def::scale_factor = 10000 / $4; }
     ;
 
 diearea:
@@ -173,7 +173,20 @@ pins:
     ;
 
 pin:
-    '-' STRING ;
+    '-' STRING 
+    pin_properties ';'
+    ;
+
+pin_properties:
+    | pin_properties '+' pin_property 
+    | '+' pin_property 
+    ;
+
+pin_property:
+    NET STRING
+    | LAYER STRING point point
+    | PLACED point STRING
+    ;
 
 nets_section:
     NETS NUMBER ';'
@@ -355,7 +368,7 @@ boolean:
 
 int readDef(Library* library,string filename) {
 
-  cout << "INFO: Reading LEF file " << filename << endl;
+  cout << "INFO: Reading DEF file " << filename << endl;
 
   def::library = library;
   def::technology = library->getTechnology();
@@ -365,7 +378,7 @@ int readDef(Library* library,string filename) {
 
   // make sure it is valid:
   if (!def_in) {
-    cout << "Failed to open LEF file " << filename << " for read!" << endl;
+    cout << "INFO: Failed to open DEF file " << filename << " for read!" << endl;
     return 1;
   }
         
@@ -377,7 +390,7 @@ int readDef(Library* library,string filename) {
     }
   } while (!feof(def_in));
 
-  cout << "INFO: Finished reading LEF file " << filename << endl;
+  cout << "INFO: Finished reading DEF file " << filename << endl;
 
   return 0;
  
@@ -385,6 +398,6 @@ int readDef(Library* library,string filename) {
 
 void def_error(const char *msg) {
 
-  cout << "DEF parse error on line " << def_line_number <<". Message :" << msg << endl;
+  cout << "ERROR: DEF parse error on line " << def_line_number <<". Message :" << msg << endl;
 
 }

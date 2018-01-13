@@ -29,6 +29,7 @@ UNITS               { return UNITS; }
 MASTERSLICE         { return MASTERSLICE; }
 ROUTING             { return ROUTING; }
 EDGECAPACITANCE     { return EDGECAPACITANCE; }
+ENCLOSURE           { return ENCLOSURE; }
 TYPE                { return TYPE; }
 PIN                 { return PIN; }
 OBS                 { return OBS; }

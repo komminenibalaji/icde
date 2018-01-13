@@ -63,7 +63,7 @@ void lef_error(const char *s);
 %token BY TO
 %token SITE SIZE SYMMETRY CLASS
 %token SHAPE PORT FOREIGN MACRO USE ORIGIN SOURCE
-%token INPUT OUTPUT TRISTATE INOUT
+%token INPUT OUTPUT TRISTATE INOUT ENCLOSURE
 
 %type <sval> layer_direction macro_pin_direction
 
@@ -87,11 +87,13 @@ rule:
     | manufacturinggrid
     | useminspacing
     | clearancemeasure
+    | propertydefinitions
     | units
     | layer
     | site
     | via
     | viarule
+    | spacing
     | macro
     ;
 
@@ -121,9 +123,30 @@ manufacturinggrid:
     MANUFACTURINGGRID NUMBER ';'
     ;
 
+propertydefinitions:
+    PROPERTYDEFINITIONS
+	LAYER STRING STRING ';'
+    END PROPERTYDEFINITIONS
+    ;
+
 useminspacing:
     USEMINSPACING OBS boolean ';'
     | USEMINSPACING PIN boolean ';'
+    ;
+
+spacing:
+    SPACING
+	spacingrules
+    END SPACING
+    ;
+
+spacingrules:
+    spacingrules spacingrule
+    | spacingrule 
+    ;
+
+spacingrule:
+    STRING STRING STRING NUMBER ';'
     ;
 
 clearancemeasure:
@@ -146,7 +169,8 @@ scaler:
     ;
 
 layer:
-    layer_masterslice
+    layer_overlap
+    | layer_masterslice
     | layer_cut
     | layer_routing
     ;
@@ -158,8 +182,14 @@ layer_masterslice:
     layer_end
     ;
 
+layer_overlap:
+    layer_name  
+       TYPE STRING ';'
+    layer_end
+    ;
+
 layer_name:
-    LAYER STRING 
+    | LAYER STRING 
     { lef::layer = lef::technology->createLayer($2); }
     ;
 
@@ -173,6 +203,7 @@ layer_cut:
         TYPE CUT ';'
         { lef::layer->setProperty("type","cut"); }          
         cut_layer_settings
+	PROPERTY STRING NUMBER ';'
     layer_end
     ;
 
@@ -200,15 +231,16 @@ routing_layer_setting:
     | PITCH NUMBER ';'
     { lef::layer->setProperty("pitch",$2); }
     | WIDTH NUMBER ';'
-    { lef::layer->setMinWidth($2*1000); }
+    { lef::layer->setMinWidth($2*10000); }
     | SPACING NUMBER ';'
-    { lef::layer->setMinSpacing($2*1000); }
+    { lef::layer->setMinSpacing($2*10000); }
     | RESISTANCE STRING NUMBER ';'
     { lef::layer->setProperty("resistance",$3); }
     | CAPACITANCE STRING NUMBER ';'
     { lef::layer->setProperty("capacitance",$3); }
     | EDGECAPACITANCE NUMBER ';'
     { lef::layer->setProperty("edge_capacitance",$2); }
+    | PROPERTY STRING NUMBER ';'
     ;
 
 via:
@@ -233,13 +265,13 @@ via_layer:
     { 
       if ( lef::viadefShapeType == "lower" ) {
 	lef::viadef->setLowerLayer($2) ;
-	lef::viadef->setLowerEnclosure($5*1000.00,$6*1000.00,$7*1000.00,$8*1000.00);
+	lef::viadef->setLowerEnclosure($5*10000.00,$6*10000.00,$7*10000.00,$8*10000.00);
       } else if ( lef::viadefShapeType == "cut" ) {
 	lef::viadef->setCutLayer($2) ;
-	lef::viadef->setCutEnclosure($5*1000.00,$6*1000.00,$7*1000.00,$8*1000.00);
+	lef::viadef->setCutEnclosure($5*10000.00,$6*10000.00,$7*10000.00,$8*10000.00);
       } else if ( lef::viadefShapeType == "upper" ) {
 	lef::viadef->setUpperLayer($2) ;
-	lef::viadef->setUpperEnclosure($5*1000.00,$6*1000.00,$7*1000.00,$8*1000.00);
+	lef::viadef->setUpperEnclosure($5*10000.00,$6*10000.00,$7*10000.00,$8*10000.00);
       }
     }
     ;
@@ -257,7 +289,6 @@ viarule_layers:
 
 viarule_layer:
     LAYER STRING ';'
-       DIRECTION layer_direction ';'
        viarule_layer_settings         
     ;
 
@@ -267,9 +298,11 @@ viarule_layer_settings:
     ;
 
 viarule_layer_setting:
+    | DIRECTION layer_direction ';'
     | WIDTH NUMBER TO NUMBER ';'
     | OVERHANG NUMBER ';'
     | METALOVERHANG NUMBER ';'
+    | ENCLOSURE NUMBER NUMBER ';'
     ;
 
 viarule_cut:
@@ -283,10 +316,19 @@ cut_layer_geometry:
 
 site:
     SITE STRING
-      CLASS STRING ';'
-      SYMMETRY STRING ';'
-      SIZE NUMBER BY NUMBER ';'
+      site_settings
     END STRING
+    ;
+
+site_settings:
+    site_settings site_setting
+    | site_setting
+    ;
+
+site_setting:
+    CLASS STRING ';'
+    | SYMMETRY STRING ';'
+    | SIZE NUMBER BY NUMBER ';'
     ;
 
 macro:
@@ -308,7 +350,7 @@ macro_setting:
     | FOREIGN STRING NUMBER NUMBER ';'
     | ORIGIN NUMBER NUMBER ';'
     | SIZE NUMBER BY NUMBER ';'
-    { lef::cell->setBoundary(0,0,$2*1000.00,$4*1000.00); }
+    { lef::cell->setBoundary(0,0,$2*10000.00,$4*10000.00); }
     | SYMMETRY STRING STRING ';'
     | SITE STRING ';'
     | macro_obs
@@ -340,7 +382,7 @@ obs_layer_geometries:
 
 obs_layer_geometry:
     RECT NUMBER NUMBER NUMBER NUMBER ';'
-    { lef::cell->createRoutingBlockage(lef::obsLayerName,$2*1000.00,$3*1000.00,$4*1000.00,$5*1000.00); }      
+    { lef::cell->createRoutingBlockage(lef::obsLayerName,$2*10000.00,$3*10000.00,$4*10000.00,$5*10000.00); }      
 
 macro_pins:
     macro_pins macro_pin
@@ -399,7 +441,7 @@ port_layer_geometries:
 
 port_layer_geometry:
     RECT NUMBER NUMBER NUMBER NUMBER ';'
-    { lef::port->createShape(lef::portLayerName,$2*1000.00,$3*1000.00,$4*1000.00,$5*1000.00); }
+    { lef::port->createShape(lef::portLayerName,$2*10000.00,$3*10000.00,$4*10000.00,$5*10000.00); }
     ;
 
 layer_direction:
@@ -447,6 +489,6 @@ int readLef(Library* lib,string filename) {
 
 void lef_error(const char *msg) {
 
-  cout << "LEF parse error on line " << lef_line_number <<". Message :" << msg << endl;
+  cout << "INFO: LEF parse error on line " << lef_line_number <<". Message :" << msg << endl;
 
 }
