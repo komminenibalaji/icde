@@ -1,6 +1,8 @@
 #include <pin.hpp>
 
-Pin::Pin(string pinname,Port* port) : Object(pinname) {
+Pin::Pin(string pinname,Instance *owner,Port* port) : Object(pinname) {
+
+  instance = owner;
 
   vector<Shape*> portshapes = port->getShapes();
 
@@ -27,3 +29,8 @@ vector<Shape*> Pin::getShapes() {
   return list;
 
 }
+
+Instance* Pin::getInstance() {
+    return instance;
+}
+

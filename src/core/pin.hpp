@@ -5,16 +5,21 @@
 #include <shape.hpp>
 #include <port.hpp>
 
+class Instance;
+
 class Pin : public Object {
 
+  Instance* instance;
   string direction;
   map<string,Shape*> shapes;
 
 public:
 
-  Pin(string,Port*);
+  Pin(string,Instance*,Port*);
 
   vector<Shape*> getShapes();
+
+  Instance* getInstance();
 
 };
 

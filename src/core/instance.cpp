@@ -11,8 +11,10 @@ Instance::Instance(string instname,Cell* master) : Object(instname) {
 
   for ( int i = 0 ; i < ports.size() ; i++ ) {
     string pinname = instname + ":" + ports[i]->getName();
-    pins[pinname] = new Pin(pinname,ports[i]);
+    pins[pinname] = new Pin(pinname,this,ports[i]);
   }
+
+  cout << "INFO : INST: Created " << pins.size() << " pin for instance " << instname << endl;
 
 }
 
@@ -54,3 +56,8 @@ vector<Pin*> Instance::getPins() {
 Shape* Instance::getBoundary() {
   return boundary;
 }
+
+Pin* Instance::getPinByName(string pinname) {
+  return pins[pinname];
+}
+

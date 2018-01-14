@@ -8,6 +8,7 @@
 #include <instance.hpp>
 
 class Instance;
+class Net;
 
 class Cell : public Object {
 
@@ -45,6 +46,9 @@ public:
   vector<Pin*> getPins();
 
   string getType();
+
+  Instance* getInstanceByName(string);
+  Port* getPortByName(string);
 
 };
 

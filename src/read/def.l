@@ -40,6 +40,7 @@ RECT                { return RECT; }
 STEP                { return STEP; }
 NETS                { return NETS; }
 PINS                { return PINS; }
+PIN                 { return PIN; }
 NET                 { return NET; }
 NEW                 { return NEW; }
 END                 { return END; }

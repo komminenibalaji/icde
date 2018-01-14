@@ -109,3 +109,10 @@ Shape* Cell::getBoundary() {
   return boundary;
 }
 
+Instance* Cell::getInstanceByName(string instname) {
+  return instances[instname];
+}
+
+Port* Cell::getPortByName(string portname) {
+  return ports[portname];
+}

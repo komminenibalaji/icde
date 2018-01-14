@@ -26,6 +26,8 @@ public:
   vector<Pin*> getPins();
   Shape* getBoundary();
 
+  Pin* getPinByName(string);
+
 };
 
 #endif

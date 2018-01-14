@@ -125,7 +125,9 @@ proc gui::fill_canvas { cpath } {
     $cpath bind instance <ButtonPress-1> {gui::selectInst %W %x %y}
     # Draw all the instance pins
     foreach pin [get_pins] {
-        gui::draw_shape $cpath [$pin getShapes] "pin"
+        if { ![string match $pin NULL] } {
+	    gui::draw_shape $cpath [$pin getShapes] "pin"
+        }
     }
 
     # Draw all the port shapes

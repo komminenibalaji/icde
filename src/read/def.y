@@ -37,7 +37,7 @@ void def_error(const char *s);
 %token NONDEFAULTRULE
 %token TRACKS STEP LAYER DO
 %token COMPONENTS PLACED FIXED UNPLACED
-%token PINS NET
+%token PINS NET 
 %token NETS ROUTED NEW PIN 
 %token SPECIALNETS RECT POLYGON SOURCE
 %token DIRECTION INPUT OUTPUT TRISTATE INOUT
@@ -332,7 +332,17 @@ net_pins:
 
 net_pin:
     '(' STRING STRING ')'
+    { 
+        cout << "INFO: DEF: Connecting pin " << $3 << " of instance " << $2 << " to net " << def::net->getName() << endl ;
+        cout << "DEBUG: Pin count before connecting net " << def::cell->getInstanceByName($2)->getPins().size() << endl ; 
+        def::net->connectNet(def::cell->getInstanceByName($2)->getPinByName($3));
+        cout << "DEBUG: Pin count after connecting net " << def::cell->getInstanceByName($2)->getPins().size() << endl ; 
+    }
     | '(' PIN STRING ')'
+    {  
+        cout << "INFO: DEF: Connecting port " << $3 << " to net " << def::net->getName() << endl ;
+        def::net->connectNet(def::cell->getPortByName($3)); 
+    }
     ;
 
 routing_points:

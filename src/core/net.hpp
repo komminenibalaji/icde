@@ -7,11 +7,12 @@
 #include <via.hpp>
 #include <pin.hpp>
 #include <port.hpp>
+#include <instance.hpp>
 
 class Net : public Object {
 
-  map<string,Pin*> pins;
-  map<string,Port*> ports;
+  vector<Pin*> pins;
+  vector<Port*> ports;
 
   vector<Via*> vias;
   vector<Shape*> shapes;
@@ -27,6 +28,9 @@ public:
   vector<Port*> getPorts();
   vector<Shape*> getShapes();
   vector<Via*> getVias();
+
+  int connectNet(Pin*);
+  int connectNet(Port*);
 
 };
 

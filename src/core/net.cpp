@@ -6,28 +6,30 @@ Net::Net(string netname) : Object(netname) {
 
 }
 
+int Net::connectNet(Pin* pin) {
+
+    cout << pin << endl;
+    if ( pin != NULL ) {
+        cout << "INFO: NET: Connecting pin " << pin->getName() << " of instance " << pin->getInstance()->getName() << " to net" << this->getName() << endl;
+        pins.push_back(pin);
+    } else {
+        cout << "ERROR: NET: Null pin pointer specified for connecting to net " << this->getName() << endl ; 
+    }
+    
+    return 0;
+
+}
+
+int Net::connectNet(Port* port) {
+    ports.push_back(port);
+}
+
 vector<Pin*> Net::getPins() {
-
-  vector<Pin*> list;
-
-  for( map<string,Pin*>::iterator itr = pins.begin() ; itr != pins.end() ; ++itr ) {
-    list.push_back(itr->second);
-  }
- 
-  return list; 
-  
+    return pins;
 }
 
 vector<Port*> Net::getPorts() {
-
-  vector<Port*> list;
-
-  for( map<string,Port*>::iterator itr = ports.begin() ; itr != ports.end() ; ++itr ) {
-    list.push_back(itr->second);
-  }
- 
-  return list; 
-  
+    return ports;
 }
 
 Shape* Net::createShape(Layer* layer,int lmx,int lmy,int umx,int umy) {
@@ -70,3 +72,4 @@ Via* Net::createVia(ViaDef* viadef,int llx,int lly) {
 vector<Via*> Net::getVias() {
   return vias;
 }
+
