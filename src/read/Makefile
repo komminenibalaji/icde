@@ -22,7 +22,7 @@ verilog.y.cc : verilog.y
 	bison -p verilog_ -d -t verilog.y -o verilog.y.cc
 
 clean :
-	rm -rf *~ *.c *.hh *.cc *.o
+	rm -rf *~ *.c *.hh *.cc *.o read
 
 read: core lef.y.o lef.l.o def.y.o def.l.o verilog.y.o verilog.l.o read.cpp 
 	g++ -I. -I../../include -I../core -o read *.o ../core/*.cpp read.cpp
