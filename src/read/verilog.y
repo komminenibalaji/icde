@@ -27,8 +27,10 @@ void verilog_error(const char *s);
 %token <cval> CHAR
 %token <fval> NUMBER
 %token <sval> STRING
+%token MODULE ENDMODULE
+%token INPUT OUTPUT WIRE TICK
 
-%token <sval> port_direction
+%type <sval> port_direction
 
 %%
 
@@ -43,17 +45,17 @@ modules:
 
 module:
     MODULE STRING '(' ports ')' ';'
-        elements:
+        entities
     ENDMODULE
     ;
 
 ports:
-    | STRING , STRING
     | STRING
+    | ports ',' STRING
     ;
 
 entities:
-    | entity entity
+    | entities entity
     | entity
     ;
 
@@ -68,21 +70,34 @@ port:
     | port_direction '[' NUMBER ':' NUMBER ']' STRING ';'
 
 port_direction:
-    INPUT
-    | OUTPUT
+    INPUT     {$$ = (char*)"in";}
+    | OUTPUT  {$$ = (char*)"out";}
     ;
 
 wire:
-    WIRE STRING ;
+    WIRE STRING ';'
+    | WIRE '[' NUMBER ':' NUMBER ']' STRING ';'
 
+instance:
+    STRING STRING '(' pins ')' ';'
+
+pins:
+    | pins ',' pin
+    | pin
+    ;
+
+pin:
+    '.' STRING '(' STRING ')'
+    | '.' STRING '(' STRING '[' NUMBER ']' ')'
+    | '.' STRING '(' NUMBER TICK STRING ')'
+ 
 %%
 
-int readDef(Library* library,string filename) {
+int readVerilog(Library* library,string filename) {
 
   cout << "INFO: Reading Verilog file " << filename << endl;
 
   verilog::library = library;
-  verilog::technology = library->getTechnology();
 
   // open a file handle to a particular file:
   verilog_in = fopen(filename.c_str(), "r");

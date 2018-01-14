@@ -20,15 +20,16 @@ int verilog_line_number = 1;
 
 "(*"                                BEGIN(ATTRIBUTE);
 <ATTRIBUTE>"*)"                     BEGIN(INITIAL);
-<COMMENT>.|"\n"                     ;
+<ATTRIBUTE>.|"\n"                     ;
 
 module    { return MODULE; }
 endmodule { return ENDMODULE; }
 input     { return INPUT; }
 output    { return OUTPUT; }
 wire      { return WIRE; }
+[\']      { return TICK; }
 
-[\;\-\+\"\(\)\*\:\,\[\]\<\>]            { return verilog_text[0]; }
+[\;\-\+\"\(\)\*\:\,\[\]\<\>\.]            { return verilog_text[0]; }
 
 \-?[0-9]+                 { verilog_lval.fval = atof(verilog_text); return NUMBER; }
 
