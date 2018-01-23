@@ -8,8 +8,11 @@ from .core import Design
 from .read import read_def as _read_def 
 from .read import read_lef as _read_lef
 
+from .gui import LayoutWindow
+
 __CURRENT_LIBRARY__ = None
 __CURRENT_DESIGN__ = None
+__LAYOUT_WINDOWS__ = []
 
 def create_library(libname,techfile):
     global __CURRENT_LIBRARY__
@@ -67,3 +70,16 @@ def read_def(deffile):
         __CURRENT_DESIGN__ = _read_def(__CURRENT_LIBRARY__,deffile)
 
 
+def start_gui():
+
+    logging.info("Starting ICDE GUI")
+    __LAYOUT_WINDOWS__.append(LayoutWindow(__CURRENT_LIBRARY__,__CURRENT_DESIGN__))
+    
+
+def stop_gui():
+
+    logging.info("Stopping ICDE GUI")
+    for lw in __LAYOUT_WINDOWS__:
+        lw.destroy()
+
+    

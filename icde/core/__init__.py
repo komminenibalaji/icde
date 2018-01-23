@@ -2,6 +2,7 @@
 
 import logging
 import shapely
+import shapely.geometry
 
 class Net:
     def __init__(self,netname):
@@ -60,8 +61,6 @@ class Design:
         # Create the cell
         cell = Cell(cellname,master)
         self.cells.append(cell)
-
-        print(master.ports)
 
         # Create the pins for the cell
         for port in master.ports:

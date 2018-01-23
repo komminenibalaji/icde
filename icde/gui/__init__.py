@@ -39,8 +39,6 @@ class Layout(ttk.Frame):
 
         self.canvas.pack(expand=1,fill=tk.BOTH)
 
-        self.zoom_fit(None)
-
         self.canvas.focus_set()
 
 
@@ -54,6 +52,9 @@ class Layout(ttk.Frame):
 
     def fill_canvas(self):
 
+        if (self.design is None):
+            return
+
         self.draw_shape(self.design.boundary,None,"grey",None,"shape diearea")
 
         for cell in self.design.cells:
@@ -66,6 +67,8 @@ class Layout(ttk.Frame):
         # self.canvas.create_rectangle(self.transform([(0,0),(10,10)]),fill="red",tag="shape")
         # self.canvas.create_rectangle(self.transform([(0,0),(10,10)]),fill="red",tag="shape")
       
+        self.zoom_fit(None)
+
 
     def create_canvas_bindings(self):
 
