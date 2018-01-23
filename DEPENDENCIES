@@ -1,0 +1,12 @@
+############################################################
+#
+# ICDE Python Package Dependencies
+#
+############################################################
+
+scipy
+ipython
+numpy
+antlr4-python3-runtime 
+shapely
+

@@ -1,0 +1,49 @@
+#!/usr/bin/python3
+
+from traitlets.config import Config
+import IPython
+from IPython.terminal.prompts import Prompts, Token
+
+
+class ICDEPrompt(Prompts):
+     def in_prompt_tokens(self, cli=None):
+         return [(Token, "icde"),(Token.Prompt, ' >')]
+
+def main():
+
+    # First create a config object from the traitlets library
+    c = Config()
+    
+    # Now we can set options as we would in a config file: 
+    c.InteractiveShell.colors = 'Linux'
+    c.InteractiveShell.confirm_exit = False
+    c.TerminalIPythonApp.display_banner = True
+    c.TerminalInteractiveShell.separate_in = ''
+
+    c.InteractiveShellApp.extensions = ['autoreload']
+    c.InteractiveShellApp.exec_lines = [
+        '%load_ext autoreload', 
+        '%autoreload 2',
+        'import os',
+        'import sys',
+        'sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(sys.argv[0]))))',
+        'from icde import *'
+    ]
+
+    c.TerminalInteractiveShell.banner1  =  """
+                     * ICDE *       
+
+        Integrated Chip Design Environment
+              Released Under GNU GPL 
+                                           
+"""
+
+    c.TerminalInteractiveShell.prompts_class = ICDEPrompt
+
+    # Now we start ipython with our configuration
+    IPython.start_ipython(config=c)
+
+
+if __name__ == '__main__':
+    main()
+
