@@ -8,6 +8,7 @@ from .DEFReader import DEFReader
 from .LEFParser import LEFParser
 from .LEFLexer  import LEFLexer
 from .LEFReader import LEFReader
+from .TLEFReader import TLEFReader
 
 from pprint import pprint
 
@@ -29,16 +30,21 @@ def read_def(library,deffile):
     return DEF.design
 
 
-def read_lef(library,leffile):
+def read_lef(library,leffile,technology=0):
 
     leffs = FileStream(leffile)
     lexer = LEFLexer(leffs)
     stream = CommonTokenStream(lexer)
     parser = LEFParser(stream)
     tree = parser.main()
- 
-    LEF = LEFReader(library)
+
+    if technology :
+        logging.info("Reading technology LEF file " + leffile)
+        LEF = TLEFReader(library)
+    else:
+        logging.info("Reading library LEF file " + leffile)
+        LEF = LEFReader(library)
+
     walker = ParseTreeWalker()
     walker.walk(LEF, tree)
-
 

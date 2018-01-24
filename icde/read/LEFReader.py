@@ -8,7 +8,6 @@ from .LEFListener import LEFListener
 class LEFReader(LEFListener) :
 
     def __init__(self,library):
-        print("LEF Init")
         self.library = library
         self.design = None
         self.scaling = 1000

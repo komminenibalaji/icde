@@ -16,7 +16,8 @@ __LAYOUT_WINDOWS__ = []
 
 def create_library(libname,techfile):
     global __CURRENT_LIBRARY__
-    __CURRENT_LIBRARY__ = core.Library(libname,techfile)
+    __CURRENT_LIBRARY__ = Library(libname)
+    _read_lef(__CURRENT_LIBRARY__,techfile)
     return __CURRENT_LIBRARY__
 
 def current_library():
@@ -78,8 +79,11 @@ def start_gui():
 
 def stop_gui():
 
+    global __LAYOUT_WINDOWS__
+
     logging.info("Stopping ICDE GUI")
     for lw in __LAYOUT_WINDOWS__:
         lw.destroy()
 
+    __LAYOUT_WINDOWS__ = []
     

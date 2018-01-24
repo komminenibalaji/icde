@@ -32,12 +32,15 @@ class Port:
         logging.debug("Creating port " + portname + " with direction " + str(direction))
         self.name = portname
         self.direction = direction
+        self.shapes = []
 
 class Shape:
-    def __init__(self,shapename,layer):
-        self.name = shapename;
+    def __init__(self,owner,layername,purpose,llx,lly,urx,ury):
+        self.owner = owner
         self.layer = get_layers(layername)
-        self.bbox = Polygon(shapely.geometry.box(0,0,0,0))
+        self.bbox = Polygon(shapely.geometry.box(llx,lly,urx,ury))
+        self.purpose = purpose
+        self.name = self.layer + "_" + self.purpose + "_" + str(bbox)
 
 class Design:
     def __init__(self,library,designname):
@@ -47,6 +50,7 @@ class Design:
         self.nets = []
         self.ports = []
         self.pins = []
+        self.shapes = []
         self.library = library
         self.boundary = shapely.geometry.Polygon(shapely.geometry.box(0,0,0,0))
 
@@ -56,7 +60,7 @@ class Design:
         master = self.library.get_design(mastername)
         if ( master is None ):
             logging.error("Specified cell master " + mastername + " doesn't exist in the cell library")
-            return 1
+            return None
 
         # Create the cell
         cell = Cell(cellname,master)
@@ -125,23 +129,38 @@ class Design:
     def get_ports(self,portname):
         return next((port for port in self.ports if port.name == portname), None)
 
+    def create_shape(self,owner,layername,purpose,llx,lly,urx,ury):
+        layer = self.library.technology.get_layers(layername)
+        shape = Shape(self,owner,layer,purpose,llx,lly,urx,ury)
+        owner.shapes.append(shape)
+        self.shapes.append(shape)
+
+
 class Technology:
-    def __init__(self,techfile):
+    def __init__(self):
         self.name = "_ICDE_DEFAULT_TECH_"
         self.layers = []
 
-    def get_layer_by_name(layername):
-        return layers[0]
+    def get_layers(self,layername):
+        return next((layer for layer in self.layers if layer.name == layername), None)
+
+    def create_layer(self,layername):
+        logging.debug("Creating layer " + layername) 
+        layer = Layer(layername)
+        self.layers.append(layer)
+        return layer
+
 
 class Layer:
     def __init__(self,layername):
         self.name = layername
 
+
 class Library:
-    def __init__(self,library_name,tech_file):
+    def __init__(self,library_name):
         self.name = library_name
         self.designs = []
-        self.technology = Technology(tech_file)
+        self.technology = Technology()
 
     def create_design(self,design_name):
         design = Design(self,design_name)

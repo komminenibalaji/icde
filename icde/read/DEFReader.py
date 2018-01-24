@@ -41,7 +41,7 @@ class DEFReader(DEFListener) :
         self.cell = self.design.create_cell(ctx.STRING()[0].getText(),ctx.STRING()[1].getText())
 
     def enterComponent_property(self, ctx:DEFParser.Component_propertyContext):
-        if ( ctx.getChild(0).getText() == "PLACED" ):
+        if ( self.cell != None and ctx.getChild(0).getText() == "PLACED" ):
             llx = int(ctx.getChild(1).getChild(1).getText() * self.scaling)
             lly = int(ctx.getChild(1).getChild(2).getText() * self.scaling)
             self.cell.set_origin(llx,lly)
