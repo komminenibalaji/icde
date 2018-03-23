@@ -62,6 +62,12 @@ class Layout(ttk.Frame):
             boundary = shapely.affinity.translate(master.get_boundary(),xoff=cell.origin.x,yoff=cell.origin.y)
             self.draw_shape(boundary,None,"purple",None,"shape cell")
             self.canvas.create_text(self.transform(list(boundary.centroid.coords)),text=cell.name,fill='white')
+
+        for port in self.design.ports:
+            boundary = shapely.geometry.box(port.origin.x - 50,port.origin.y - 50,port.origin.x + 50 , port.origin.y + 50)
+            self.draw_shape(boundary,None,"blue",None,"shape port")
+            self.canvas.create_text(self.transform(list(boundary.centroid.coords)),text=port.name,fill='white')
+
         # self.canvas.create_rectangle(self.transform([(0,0),(10,10)]),fill="grey",tag="shape")
         # self.canvas.create_rectangle(self.transform([(0,0),(10,10)]),fill="red",tag="shape")
         # self.canvas.create_rectangle(self.transform([(0,0),(10,10)]),fill="red",tag="shape")

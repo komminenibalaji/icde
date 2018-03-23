@@ -17,7 +17,7 @@ __LAYOUT_WINDOWS__ = []
 def create_library(libname,techfile):
     global __CURRENT_LIBRARY__
     __CURRENT_LIBRARY__ = Library(libname)
-    _read_lef(__CURRENT_LIBRARY__,techfile)
+    _read_lef(__CURRENT_LIBRARY__,techfile,technology=1)
     return __CURRENT_LIBRARY__
 
 def current_library():

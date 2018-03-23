@@ -33,6 +33,12 @@ class Port:
         self.name = portname
         self.direction = direction
         self.shapes = []
+        self.origin = shapely.geometry.Point(0,0)
+
+    def set_origin(self,llx,lly):
+        logging.debug("Setting port " + self.name + " origin to (" + str(llx) + "," + str(lly) + ")")
+        self.origin = shapely.geometry.Point(llx,lly)
+
 
 class Shape:
     def __init__(self,owner,layername,purpose,llx,lly,urx,ury):
@@ -52,7 +58,11 @@ class Design:
         self.pins = []
         self.shapes = []
         self.library = library
-        self.boundary = shapely.geometry.Polygon(shapely.geometry.box(0,0,0,0))
+        self.boundary = None
+        self.width = None
+        self.height = None
+
+        self.set_boundary(((0,0),(0,0)))
 
     def create_cell(self,cellname,mastername):
 
@@ -84,11 +94,16 @@ class Design:
         return port
 
     def set_boundary(self,points):
+
         if ( len(points) == 2 ):
             [(llx,lly),(urx,ury)] = points
             self.boundary = shapely.geometry.Polygon(shapely.geometry.box(llx,lly,urx,ury))
         else:
             self.boundary = Polygon(points)
+
+        self.width = self.boundary.bounds[2]
+        self.height = self.boundary.bounds[3]
+
 
     def get_boundary(self):
         return self.boundary
@@ -140,19 +155,33 @@ class Technology:
     def __init__(self):
         self.name = "_ICDE_DEFAULT_TECH_"
         self.layers = []
+        self.site = None
 
     def get_layers(self,layername):
         return next((layer for layer in self.layers if layer.name == layername), None)
 
     def create_layer(self,layername):
-        logging.debug("Creating layer " + layername) 
         layer = Layer(layername)
         self.layers.append(layer)
         return layer
 
+    def create_site(self,sitename):
+        self.site = Site(sitename)
+        return self.site
 
+
+class Site:
+    def __init__(self,sitename):
+        logging.debug("Creating placement site " + sitename) 
+        self.name = sitename
+        self.width = None
+        self.height = None
+        self.symmetry = None
+
+    
 class Layer:
     def __init__(self,layername):
+        logging.debug("Creating layer " + layername) 
         self.name = layername
 
 
