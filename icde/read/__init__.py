@@ -19,7 +19,7 @@ def read_def(library,deffile):
     lexer = DEFLexer(deffs)
     stream = CommonTokenStream(lexer)
     parser = DEFParser(stream)
-    tree = parser.main()
+    tree = parser.def_file()
 
     # pprint(Trees.toStringTree(tree, None, parser))    
 
@@ -32,17 +32,19 @@ def read_def(library,deffile):
 
 def read_lef(library,leffile,technology=0):
 
+    logging.info("Reading LEF file " + leffile)
+
     leffs = FileStream(leffile)
     lexer = LEFLexer(leffs)
     stream = CommonTokenStream(lexer)
     parser = LEFParser(stream)
-    tree = parser.main()
+    tree = parser.lef_file()
 
     if technology :
-        logging.info("Reading technology LEF file " + leffile)
+        logging.info("Skip reading cell data from LEF file")
         LEF = TLEFReader(library)
     else:
-        logging.info("Reading library LEF file " + leffile)
+        logging.info("Skip reading technology data from LEF file")
         LEF = LEFReader(library)
 
     walker = ParseTreeWalker()

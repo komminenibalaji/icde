@@ -13,22 +13,19 @@ class LEFReader(LEFListener) :
         self.scaling = 1000
         self.portname = None
 
-    def enterMacro(self, ctx:LEFParser.MacroContext):
-        self.design = self.library.create_design(ctx.STRING()[1].getText()) 
+    def enterStart_macro(self, ctx:LEFParser.Start_macroContext):
+        self.design = self.library.create_design(ctx.children[1].getText()) 
 
-    def enterMacro_setting(self, ctx:LEFParser.Macro_settingContext):
-        if ( ctx.getChild(0).getText() == "SIZE" ):
-            width = int(float(ctx.NUMBER()[0].getText()) * self.scaling)
-            height = int(float(ctx.NUMBER()[1].getText()) * self.scaling)
-            self.design.set_boundary([(0,0),(width,height)])
+    def enterMacro_size(self, ctx:LEFParser.Macro_sizeContext):
+        width = int(float(ctx.children[1].getText()) * self.scaling)
+        height = int(float(ctx.children[3].getText()) * self.scaling)
+        self.design.set_boundary([(0,0),(width,height)])
 
-    def enterMacro_pin(self, ctx:LEFParser.Macro_pinContext):
+    def enterStart_macro_pin(self, ctx:LEFParser.Start_macro_pinContext):
         self.portname = ctx.children[1].getText()
 
-
-    def enterMacro_pin_setting(self, ctx:LEFParser.Macro_pin_settingContext):
-        if ( ctx.children[0].getText() == "DIRECTION" ):
-            self.port = self.design.create_port(self.portname,ctx.children[1].getText())
+    def enterElectrical_direction(self, ctx:LEFParser.Electrical_directionContext):
+        self.port = self.design.create_port(self.portname,ctx.children[1].getText())
 
 
 

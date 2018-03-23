@@ -132,22 +132,11 @@ bus_bit_chars:
     ;
 
 canplace:
-    K_CANPLACE T_STRING NUMBER NUMBER orient K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER ';'
+    K_CANPLACE T_STRING NUMBER NUMBER T_STRING K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER ';'
     ;
 
 cannotoccupy:
-    K_CANNOTOCCUPY T_STRING NUMBER NUMBER orient K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER ';'
-    ;
-
-orient:
-    K_N
-    | K_W
-    | K_S
-    | K_E
-    | K_FN
-    | K_FW
-    | K_FS
-    | K_FE
+    K_CANNOTOCCUPY T_STRING NUMBER NUMBER T_STRING K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER ';'
     ;
 
 die_area:
@@ -206,7 +195,7 @@ pin_option:
     | '+' K_LAYER T_STRING pin_layer_mask_opt pin_layer_spacing_opt pt pt
     | '+' K_POLYGON T_STRING pin_poly_mask_opt pin_poly_spacing_opt firstPt nextPt nextPt otherPts
     | '+' K_VIA T_STRING pin_via_mask_opt '(' NUMBER NUMBER ')'
-    | placement_status pt orient
+    | placement_status pt T_STRING
     | '+' K_ANTENNAPINPARTIALMETALAREA NUMBER pin_layer_opt
     | '+' K_ANTENNAPINPARTIALMETALSIDEAREA NUMBER pin_layer_opt
     | '+' K_ANTENNAPINGATEAREA NUMBER pin_layer_opt
@@ -267,7 +256,7 @@ end_pins:
     ;
 
 row_rule:
-    K_ROW T_STRING T_STRING NUMBER NUMBER orient row_do_option row_options ';'
+    K_ROW T_STRING T_STRING NUMBER NUMBER T_STRING row_do_option row_options ';'
     ;
 
 row_do_option:
@@ -301,12 +290,7 @@ tracks_rule:
     ;
 
 track_start:
-    K_TRACKS track_type
-    ;
-
-track_type:
-    K_X
-    | K_Y
+    K_TRACKS T_STRING
     ;
 
 track_opts:
@@ -334,7 +318,7 @@ track_layer:
     ;
 
 gcellgrid:
-    K_GCELLGRID track_type NUMBER K_DO NUMBER K_STEP NUMBER ';'
+    K_GCELLGRID T_STRING NUMBER K_DO NUMBER K_STEP NUMBER ';'
     ;
 
 extension_section:
@@ -583,7 +567,7 @@ comp_region_start:
     ;
 
 comp_foreign:
-    '+' K_FOREIGN T_STRING opt_paren orient
+    '+' K_FOREIGN T_STRING opt_paren T_STRING
     ;
 
 opt_paren:
@@ -592,9 +576,9 @@ opt_paren:
     ;
 
 comp_type:
-    placement_status pt orient
+    placement_status pt T_STRING
     | '+' K_UNPLACED
-    | '+' K_UNPLACED pt orient
+    | '+' K_UNPLACED pt T_STRING
     ;
 
 maskShift:
@@ -717,7 +701,7 @@ vpin_layer_opt:
     ;
 
 vpin_options:
-    | vpin_status pt orient
+    | vpin_status pt T_STRING
     ;
 
 vpin_status:
@@ -760,12 +744,12 @@ path_item_list:
 path_item:
     T_STRING
     | K_MASK NUMBER T_STRING
-    | T_STRING orient
-    | K_MASK NUMBER T_STRING orient
+    | T_STRING T_STRING
+    | K_MASK NUMBER T_STRING T_STRING
     | K_MASK NUMBER T_STRING K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER
     | T_STRING K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER
-    | T_STRING orient K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER
-    | K_MASK NUMBER T_STRING orient K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER
+    | T_STRING T_STRING K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER
+    | K_MASK NUMBER T_STRING T_STRING K_DO NUMBER K_BY NUMBER K_STEP NUMBER NUMBER
     | virtual_statement
     | rect_statement
     | K_MASK NUMBER K_RECT '(' NUMBER NUMBER NUMBER NUMBER ')'
@@ -872,7 +856,7 @@ snet_other_option:
     | '+' K_MASK NUMBER
     | '+' K_POLYGON T_STRING firstPt nextPt nextPt otherPts
     | '+' K_RECT T_STRING pt pt
-    | '+' K_VIA T_STRING orient_pt firstPt otherPts
+    | '+' K_VIA T_STRING T_STRING firstPt otherPts
     | '+' K_SOURCE source_type
     | '+' K_FIXEDBUMP
     | '+' K_FREQUENCY NUMBER
@@ -884,17 +868,6 @@ snet_other_option:
     | '+' K_STYLE NUMBER
     | '+' K_PROPERTY snet_prop_list
     | extension_stmt
-    ;
-
-orient_pt:
-    | K_N
-    | K_W
-    | K_S
-    | K_E
-    | K_FN
-    | K_FW
-    | K_FS
-    | K_FE
     ;
 
 shield_layer:
@@ -1773,14 +1746,6 @@ K_VOLTAGE                      : 'VOLTAGE' ;
 K_SPACING                      : 'SPACING' ;
 K_NONDEFAULTRULE               : 'NONDEFAULTRULE' ;
 K_NONDEFAULTRULES              : 'NONDEFAULTRULES' ;
-K_N                            : 'N' ;
-K_S                            : 'S' ;
-K_E                            : 'E' ;
-K_W                            : 'W' ;
-K_FN                           : 'FN' ;
-K_FE                           : 'FE' ;
-K_FS                           : 'FS' ;
-K_FW                           : 'FW' ;
 K_GROUPS                       : 'GROUPS' ;
 K_GROUP                        : 'GROUP' ;
 K_SOFT                         : 'SOFT' ;
@@ -1884,8 +1849,6 @@ K_ENDEXT                       : 'ENDEXT' ;
 K_NAMEMAPSTRING                : 'NAMEMAPSTRING' ;
 K_ON                           : 'ON' ;
 K_OFF                          : 'OFF' ;
-K_X                            : 'X' ;
-K_Y                            : 'Y' ;
 K_COMPSMASKSHIFT               : 'COMPSMASKSHIFT' ;
 K_COMPONENTS                   : 'COMPONENTS' ;
 K_COMPONENT                    : 'COMPONENT' ;
