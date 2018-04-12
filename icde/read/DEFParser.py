@@ -1827,7 +1827,7 @@ class DEFParser ( Parser ):
                      "'UNPLACED'", "'PLACED'", "'FOREIGN'", "'REGION'", 
                      "'REGIONS'", "'NETS'", "'START_NET'", "'MUSTJOIN'", 
                      "'ORIGINAL'", "'USE'", "'STYLE'", "'PATTERN'", "'PATTERNNAME'", 
-                     "'ESTCAP'", "'ROUTED'", "'NEW'", "'SNETS'", "'SHAPE'", 
+                     "'ESTCAP'", "'ROUTED'", "'NEW'", "'SPECIALNETS'", "'SHAPE'", 
                      "'WIDTH'", "'VOLTAGE'", "'SPACING'", "'NONDEFAULTRULE'", 
                      "'NONDEFAULTRULES'", "'GROUPS'", "'GROUP'", "'SOFT'", 
                      "'MAXX'", "'MAXY'", "'MAXHALFPERIMETER'", "'CONSTRAINTS'", 

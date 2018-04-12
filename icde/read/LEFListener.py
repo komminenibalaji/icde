@@ -1304,6 +1304,15 @@ class LEFListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LEFParser#site_size.
+    def enterSite_size(self, ctx:LEFParser.Site_sizeContext):
+        pass
+
+    # Exit a parse tree produced by LEFParser#site_size.
+    def exitSite_size(self, ctx:LEFParser.Site_sizeContext):
+        pass
+
+
     # Enter a parse tree produced by LEFParser#site_class.
     def enterSite_class(self, ctx:LEFParser.Site_classContext):
         pass

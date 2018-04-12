@@ -1,6 +1,7 @@
 import sys
 import os
 import logging
+import shapely
 
 from .core import Library
 from .core import Design
@@ -12,6 +13,7 @@ from .gui import LayoutWindow
 
 __CURRENT_LIBRARY__ = None
 __CURRENT_DESIGN__ = None
+__CURRENT_WINDOW__ = None
 __LAYOUT_WINDOWS__ = []
 
 def create_library(libname,techfile):
@@ -34,6 +36,7 @@ def create_design(design_name):
         logging.error("Current library is not defined")
 
 def current_design():
+    global __CURRENT_DESIGN__
     if not ( __CURRENT_DESIGN__ is None ):
         return __CURRENT_DESIGN__
     else:
@@ -73,8 +76,13 @@ def read_def(deffile):
 
 def start_gui():
 
+    global __CURRENT_WINDOW__
+    global __LAYOUT_WINDOW__
+
     logging.info("Starting ICDE GUI")
-    __LAYOUT_WINDOWS__.append(LayoutWindow(__CURRENT_LIBRARY__,__CURRENT_DESIGN__))
+
+    __CURRENT_WINDOW__ = LayoutWindow(__CURRENT_LIBRARY__,__CURRENT_DESIGN__)
+    __LAYOUT_WINDOWS__.append(__CURRENT_WINDOW__)
     
 
 def stop_gui():
@@ -86,4 +94,16 @@ def stop_gui():
         lw.destroy()
 
     __LAYOUT_WINDOWS__ = []
-    
+
+def show_congestion_map(filename):
+    global __CURRENT_WINDOW__
+    __CURRENT_WINDOW__.layout.show_congestion_map(filename)
+
+def hide_congestion_map():
+    global __CURRENT_WINDOW__
+    __CURRENT_WINDOW__.layout.hide_congestion_map()
+
+def source(filename):
+
+    exec(open(filename).read())
+

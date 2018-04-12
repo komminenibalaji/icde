@@ -1739,7 +1739,7 @@ K_PATTERNNAME                  : 'PATTERNNAME' ;
 K_ESTCAP                       : 'ESTCAP' ;
 K_ROUTED                       : 'ROUTED' ;
 K_NEW                          : 'NEW' ;
-K_SNETS                        : 'SNETS' ;
+K_SNETS                        : 'SPECIALNETS' ;
 K_SHAPE                        : 'SHAPE' ;
 K_WIDTH                        : 'WIDTH' ;
 K_VOLTAGE                      : 'VOLTAGE' ;

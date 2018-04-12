@@ -3,6 +3,7 @@ import sys
 import tkinter as tk
 import shapely.geometry
 import shapely.affinity
+import re
 
 from tkinter import ttk
 
@@ -49,6 +50,31 @@ class Layout(ttk.Frame):
 
     def transform(polygon):
         print("Transform")
+
+    def show_congestion_map(self,filename):
+
+        if (self.design is None):
+            return
+
+        with open(filename) as f:
+            logging.info("Reading congestion map from file " + filename)
+            content = f.readlines()
+
+        content = [x.strip() for x in content] 
+
+        for line in content:
+            ignore = re.match('^(#.*|\s*)$',line)
+            match = re.match('(\S+)\s+(\d+.?\d*)\s+(\d+.?\d*)\s+(\d+.?\d*)\s+(\d+.?\d*)',line)
+            if (ignore):
+                pass
+            elif (match):
+                polygon = shapely.geometry.Polygon(shapely.geometry.box(float(match.group(2)),float(match.group(3)),float(match.group(4)),float(match.group(5))))
+                self.draw_shape(polygon,match.group(1),"grey","gray12","overlay congestion_map")
+            else:
+                logging.error("Invalid syntax on line '" + line + "' specified. Must be 'color llx lly urx ury'")
+
+    def hide_congestion_map(self):
+        self.canvas.delete("congestion_map")
 
     def fill_canvas(self):
 

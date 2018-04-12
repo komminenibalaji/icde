@@ -22,9 +22,8 @@ class TLEFReader(LEFListener) :
         self.site = self.technology.create_site(ctx.children[1].getText())
         print("Reading site definition " + self.site.name)
 
-    def enterSite_option(self, ctx:LEFParser.Site_optionContext):
-        if ( ctx.children[0].getText() == "SIZE" ):
-            self.site.width = int(float(ctx.children[1].getText()) * self.scaling)
-            self.site.height = int(float(ctx.children[3].getText()) * self.scaling)
+    def enterSite_size(self, ctx:LEFParser.Site_sizeContext):
+        self.site.width = int(float(ctx.children[1].getText()) * self.scaling)
+        self.site.height = int(float(ctx.children[3].getText()) * self.scaling)
 
 

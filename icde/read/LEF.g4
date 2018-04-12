@@ -796,10 +796,14 @@ site_options:
     ;
 
 site_option:
-    K_SIZE int_number K_BY int_number ';'
+    site_size
     | site_symmetry_statement
     | site_class
     | site_rowpattern_statement
+    ;
+
+site_size:
+    K_SIZE int_number K_BY int_number ';'
     ;
 
 site_class:
@@ -899,9 +903,9 @@ macro_symmetry:
     ;
 
 macro_name_value_pair:
-    T_STRING NUMBER
-    | T_STRING QSTRING
-    | T_STRING T_STRING
+    T_STRING NUMBER 
+    | T_STRING QSTRING 
+    | T_STRING T_STRING 
     ;
 
 macro_class:
@@ -2116,7 +2120,7 @@ K_TWOWIDTHS                    : 'TWOWIDTHS' ;
 
 NUMBER                         : [\-]?[0-9]+ | [\-]?[0-9]+[.][0-9]+ ;
 T_STRING                       : [a-z0-9A-Z_\[\]\<\>\/]+ ;
-QSTRING                        : ["][a-z0-9A-Z_\[\]\<\>\/ ;.]+["] ;
+QSTRING                        : ["][a-z0-9A-Z_\[\]\<\>\/ ;.\n]+["] ;
 
 COMMENT                        : '#' ~[\n]+ '\n'  -> skip;
 SPACE                          : [ \n\t] -> skip ;
