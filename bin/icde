@@ -2,8 +2,8 @@
 
 from traitlets.config import Config
 import IPython
+import logging
 from IPython.terminal.prompts import Prompts, Token
-
 
 class ICDEPrompt(Prompts):
      def in_prompt_tokens(self, cli=None):
@@ -46,5 +46,6 @@ def main():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
     main()
 

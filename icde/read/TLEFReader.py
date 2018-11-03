@@ -1,6 +1,7 @@
 import sys
 import pprint
 import icde.core
+import logging
 from antlr4 import *
 from .LEFParser import LEFParser
 from .LEFListener import LEFListener
@@ -20,10 +21,13 @@ class TLEFReader(LEFListener) :
 
     def enterStart_site(self, ctx:LEFParser.Start_siteContext):
         self.site = self.technology.create_site(ctx.children[1].getText())
-        print("Reading site definition " + self.site.name)
+        logging.info("Reading site definition " + self.site.name)
 
     def enterSite_size(self, ctx:LEFParser.Site_sizeContext):
         self.site.width = int(float(ctx.children[1].getText()) * self.scaling)
         self.site.height = int(float(ctx.children[3].getText()) * self.scaling)
+
+    def enterStart_macro(self, ctx:LEFParser.Start_macroContext):
+        logging.debug("Skipping macro " + ctx.children[1].getText()) 
 
 

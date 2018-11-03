@@ -16,16 +16,21 @@ from pprint import pprint
 def read_def(library,deffile):
 
     deffs = FileStream(deffile)
+    logging.info("Lexing LEF stream")
     lexer = DEFLexer(deffs)
     stream = CommonTokenStream(lexer)
+    logging.info("Parsing LEF stream")
     parser = DEFParser(stream)
     tree = parser.def_file()
 
     # pprint(Trees.toStringTree(tree, None, parser))    
 
+    logging.info("Initializing DEF Data")
     DEF = DEFReader(library)
     walker = ParseTreeWalker()
     walker.walk(DEF, tree)
+
+    del(tree)
 
     return DEF.design
 
@@ -35,8 +40,12 @@ def read_lef(library,leffile,technology=0):
     logging.info("Reading LEF file " + leffile)
 
     leffs = FileStream(leffile)
+
+    logging.info("Lexing LEF stream")
     lexer = LEFLexer(leffs)
     stream = CommonTokenStream(lexer)
+
+    logging.info("Parsing LEF stream")
     parser = LEFParser(stream)
     tree = parser.lef_file()
 
@@ -47,6 +56,10 @@ def read_lef(library,leffile,technology=0):
         logging.info("Skip reading technology data from LEF file")
         LEF = LEFReader(library)
 
+    logging.info("Initializing LEF data")
+
     walker = ParseTreeWalker()
     walker.walk(LEF, tree)
+
+    del(tree)
 

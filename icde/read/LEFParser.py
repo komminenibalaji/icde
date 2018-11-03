@@ -2,6 +2,7 @@
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
+from pprint import pprint
 
 def serializedATN():
     with StringIO() as buf:
@@ -3381,7 +3382,6 @@ class LEFParser ( Parser ):
 
 
     def lef_rule(self):
-
         localctx = LEFParser.Lef_ruleContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_lef_rule)
         try:

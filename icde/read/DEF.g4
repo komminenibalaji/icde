@@ -1944,7 +1944,7 @@ K_PARTIAL                      : 'PARTIAL' ;
 K_ROUTEHALO                    : 'ROUTEHALO' ;
 
 NUMBER                         : [\-]?[0-9]+ | [\-]?[0-9]+[.][0-9]+ ;
-T_STRING                       : [a-z0-9A-Z_\[\]\<\>\/]+ ;
+T_STRING                       : [a-z0-9A-Z_\[\]\<\>\/\.]+ ;
 QSTRING                        : ["][a-z0-9A-Z_\[\]\<\>\/ ;.]+["] ;
 
 COMMENT                        : '#' ~[\n]+ '\n'  -> skip;
