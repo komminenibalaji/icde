@@ -1,5 +1,6 @@
 from antlr4 import *
 from antlr4.tree.Trees import Trees
+import sys
 
 import logging
 from .DEFParser import DEFParser
@@ -15,11 +16,13 @@ from pprint import pprint
 
 def read_def(library,deffile):
 
+    sys.setrecursionlimit(1000000)
+
     deffs = FileStream(deffile)
-    logging.info("Lexing LEF stream")
+    logging.info("Lexing DEF file")
     lexer = DEFLexer(deffs)
     stream = CommonTokenStream(lexer)
-    logging.info("Parsing LEF stream")
+    logging.info("Parsing DEF file")
     parser = DEFParser(stream)
     tree = parser.def_file()
 

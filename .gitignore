@@ -1,3 +1,5 @@
 icde/__pycache__
 icde/*/__pycache__
-
+*.swp
+*/*.swp
+*/*/*.swp
