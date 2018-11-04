@@ -1,11 +1,13 @@
-# Generated from DEF.g4 by ANTLR 4.5.1
+# Generated from DEF.g4 by ANTLR 4.7.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
+from typing.io import TextIO
+import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\u0108")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0108")
         buf.write("\u0d15\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -470,7 +472,7 @@ def serializedATN():
         buf.write("\u00c6\4\2\u00de\u00de\u00e0\u00e0\3\2\u00d6\u00d9\4\2")
         buf.write("\u00ae\u00ae\u00d6\u00d9\4\2\'(**\4\2\'(\67\67\5\2\u00c7")
         buf.write("\u00d0\u00e5\u00e5\u0100\u0100\4\2VV\u00da\u00dc\3\2]")
-        buf.write("^\3\2\u008f\u0090\5\2\'(\67\67\u00b5\u00b5\u0d37\2\u02b2")
+        buf.write("^\3\2\u008f\u0090\5\2\'(\67\67\u00b5\u00b5\2\u0d37\2\u02b2")
         buf.write("\3\2\2\2\4\u02bb\3\2\2\2\6\u02c4\3\2\2\2\b\u02c8\3\2\2")
         buf.write("\2\n\u02e7\3\2\2\2\f\u02fa\3\2\2\2\16\u02fc\3\2\2\2\20")
         buf.write("\u0300\3\2\2\2\22\u0303\3\2\2\2\24\u0307\3\2\2\2\26\u030b")
@@ -2645,9 +2647,9 @@ class DEFParser ( Parser ):
     COMMENT=261
     SPACE=262
 
-    def __init__(self, input:TokenStream):
-        super().__init__(input)
-        self.checkVersion("4.5.1")
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.7.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -2743,6 +2745,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_version_stmt)
         try:
             self.state = 697
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -2803,6 +2806,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_case_sens_stmt)
         try:
             self.state = 706
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -2875,6 +2879,7 @@ class DEFParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 710
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 pass
@@ -3028,117 +3033,118 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_def_rule)
         try:
             self.state = 741
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_HISTORY, DEFParser.K_DESIGN, DEFParser.K_TECH, DEFParser.K_UNITS, DEFParser.K_ARRAY, DEFParser.K_FLOORPLAN, DEFParser.K_CANPLACE, DEFParser.K_CANNOTOCCUPY, DEFParser.K_DIEAREA, DEFParser.K_PINS, DEFParser.K_DEFAULTCAP, DEFParser.K_TRACKS, DEFParser.K_GCELLGRID, DEFParser.K_ROW, DEFParser.K_DIVIDERCHAR, DEFParser.K_BUSBITCHARS, DEFParser.K_PROPERTYDEFINITIONS]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 719
                 self.design_section()
-
+                pass
             elif token in [DEFParser.K_ASSERTIONS]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 720
                 self.assertions_section()
-
+                pass
             elif token in [DEFParser.K_BLOCKAGES]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 721
                 self.blockage_section()
-
+                pass
             elif token in [DEFParser.K_COMPS, DEFParser.K_COMPONENTS]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 722
                 self.comps_section()
-
+                pass
             elif token in [DEFParser.K_CONSTRAINTS]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 723
                 self.constraint_section()
-
+                pass
             elif token in [DEFParser.K_BEGINEXT]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 724
                 self.extension_section()
-
+                pass
             elif token in [DEFParser.K_FILLS]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 725
                 self.fill_section()
-
+                pass
             elif token in [DEFParser.K_COMPSMASKSHIFT]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 726
                 self.comps_maskShift_section()
-
+                pass
             elif token in [DEFParser.K_FPC]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 727
                 self.floorplan_contraints_section()
-
+                pass
             elif token in [DEFParser.K_GROUPS]:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 728
                 self.groups_section()
-
+                pass
             elif token in [DEFParser.K_IOTIMINGS]:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 729
                 self.iotiming_section()
-
+                pass
             elif token in [DEFParser.K_NETS]:
                 self.enterOuterAlt(localctx, 12)
                 self.state = 730
                 self.nets_section()
-
+                pass
             elif token in [DEFParser.K_NONDEFAULTRULES]:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 731
                 self.nondefaultrule_section()
-
+                pass
             elif token in [DEFParser.K_PARTITIONS]:
                 self.enterOuterAlt(localctx, 14)
                 self.state = 732
                 self.partitions_section()
-
+                pass
             elif token in [DEFParser.K_PINPROPERTIES]:
                 self.enterOuterAlt(localctx, 15)
                 self.state = 733
                 self.pin_props_section()
-
+                pass
             elif token in [DEFParser.K_REGIONS]:
                 self.enterOuterAlt(localctx, 16)
                 self.state = 734
                 self.regions_section()
-
+                pass
             elif token in [DEFParser.K_SCANCHAINS]:
                 self.enterOuterAlt(localctx, 17)
                 self.state = 735
                 self.scanchains_section()
-
+                pass
             elif token in [DEFParser.K_SLOTS]:
                 self.enterOuterAlt(localctx, 18)
                 self.state = 736
                 self.slot_section()
-
+                pass
             elif token in [DEFParser.K_SNETS]:
                 self.enterOuterAlt(localctx, 19)
                 self.state = 737
                 self.snets_section()
-
+                pass
             elif token in [DEFParser.K_STYLES]:
                 self.enterOuterAlt(localctx, 20)
                 self.state = 738
                 self.styles_section()
-
+                pass
             elif token in [DEFParser.K_TIMINGDISABLES]:
                 self.enterOuterAlt(localctx, 21)
                 self.state = 739
                 self.timingdisables_section()
-
+                pass
             elif token in [DEFParser.K_VIAS]:
                 self.enterOuterAlt(localctx, 22)
                 self.state = 740
                 self.via_section()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -3244,92 +3250,93 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_design_section)
         try:
             self.state = 760
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_ARRAY]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 743
                 self.array_name()
-
+                pass
             elif token in [DEFParser.K_BUSBITCHARS]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 744
                 self.bus_bit_chars()
-
+                pass
             elif token in [DEFParser.K_CANPLACE]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 745
                 self.canplace()
-
+                pass
             elif token in [DEFParser.K_CANNOTOCCUPY]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 746
                 self.cannotoccupy()
-
+                pass
             elif token in [DEFParser.K_DESIGN]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 747
                 self.design_name()
-
+                pass
             elif token in [DEFParser.K_DIEAREA]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 748
                 self.die_area()
-
+                pass
             elif token in [DEFParser.K_DIVIDERCHAR]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 749
                 self.divider_char()
-
+                pass
             elif token in [DEFParser.K_FLOORPLAN]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 750
                 self.floorplan_name()
-
+                pass
             elif token in [DEFParser.K_GCELLGRID]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 751
                 self.gcellgrid()
-
+                pass
             elif token in [DEFParser.K_HISTORY]:
                 self.enterOuterAlt(localctx, 10)
                 self.state = 752
                 self.history()
-
+                pass
             elif token in [DEFParser.K_DEFAULTCAP]:
                 self.enterOuterAlt(localctx, 11)
                 self.state = 753
                 self.pin_cap_rule()
-
+                pass
             elif token in [DEFParser.K_PINS]:
                 self.enterOuterAlt(localctx, 12)
                 self.state = 754
                 self.pin_rule()
-
+                pass
             elif token in [DEFParser.K_PROPERTYDEFINITIONS]:
                 self.enterOuterAlt(localctx, 13)
                 self.state = 755
                 self.prop_def_section()
-
+                pass
             elif token in [DEFParser.K_ROW]:
                 self.enterOuterAlt(localctx, 14)
                 self.state = 756
                 self.row_rule()
-
+                pass
             elif token in [DEFParser.K_TECH]:
                 self.enterOuterAlt(localctx, 15)
                 self.state = 757
                 self.tech_name()
-
+                pass
             elif token in [DEFParser.K_TRACKS]:
                 self.enterOuterAlt(localctx, 16)
                 self.state = 758
                 self.tracks_rule()
-
+                pass
             elif token in [DEFParser.K_UNITS]:
                 self.enterOuterAlt(localctx, 17)
                 self.state = 759
                 self.units()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -3788,6 +3795,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_property_def)
         try:
             self.state = 841
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_DESIGN]:
                 self.enterOuterAlt(localctx, 1)
@@ -3799,7 +3807,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 799
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_NET]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 801
@@ -3810,7 +3818,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 804
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_SNET]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 806
@@ -3821,7 +3829,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 809
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_REGION]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 811
@@ -3832,7 +3840,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 814
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_GROUP]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 816
@@ -3843,7 +3851,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 819
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_COMPONENT]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 821
@@ -3854,7 +3862,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 824
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_ROW]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 826
@@ -3865,7 +3873,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 829
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_COMPONENTPIN]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 831
@@ -3876,7 +3884,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 834
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_NONDEFAULTRULE]:
                 self.enterOuterAlt(localctx, 9)
                 self.state = 836
@@ -3887,7 +3895,7 @@ class DEFParser ( Parser ):
                 self.property_type_and_val()
                 self.state = 839
                 self.match(DEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -3951,6 +3959,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 30, self.RULE_property_type_and_val)
         try:
             self.state = 856
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -4032,16 +4041,17 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 32, self.RULE_opt_num_val)
         try:
             self.state = 860
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 859
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -5135,6 +5145,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 66, self.RULE_pin_option)
         try:
             self.state = 1055
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -5431,18 +5442,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 68, self.RULE_pin_layer_mask_opt)
         try:
             self.state = 1060
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3, DEFParser.K_SPACING, DEFParser.K_DESIGNRULEWIDTH]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_MASK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1058
                 self.match(DEFParser.K_MASK)
                 self.state = 1059
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -5486,18 +5498,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 70, self.RULE_pin_via_mask_opt)
         try:
             self.state = 1065
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_MASK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1063
                 self.match(DEFParser.K_MASK)
                 self.state = 1064
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -5541,18 +5554,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 72, self.RULE_pin_poly_mask_opt)
         try:
             self.state = 1070
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3, DEFParser.K_SPACING, DEFParser.K_DESIGNRULEWIDTH]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_MASK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1068
                 self.match(DEFParser.K_MASK)
                 self.state = 1069
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -5599,25 +5613,26 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 74, self.RULE_pin_layer_spacing_opt)
         try:
             self.state = 1077
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1073
                 self.match(DEFParser.K_SPACING)
                 self.state = 1074
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_DESIGNRULEWIDTH]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1075
                 self.match(DEFParser.K_DESIGNRULEWIDTH)
                 self.state = 1076
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -5664,25 +5679,26 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 76, self.RULE_pin_poly_spacing_opt)
         try:
             self.state = 1084
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1080
                 self.match(DEFParser.K_SPACING)
                 self.state = 1081
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_DESIGNRULEWIDTH]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1082
                 self.match(DEFParser.K_DESIGNRULEWIDTH)
                 self.state = 1083
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -5738,6 +5754,7 @@ class DEFParser ( Parser ):
             if not(((((_la - 228)) & ~0x3f) == 0 and ((1 << (_la - 228)) & ((1 << (DEFParser.K_OXIDE1 - 228)) | (1 << (DEFParser.K_OXIDE2 - 228)) | (1 << (DEFParser.K_OXIDE3 - 228)) | (1 << (DEFParser.K_OXIDE4 - 228)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -5803,6 +5820,7 @@ class DEFParser ( Parser ):
             if not(((((_la - 189)) & ~0x3f) == 0 and ((1 << (_la - 189)) & ((1 << (DEFParser.K_SIGNAL - 189)) | (1 << (DEFParser.K_POWER - 189)) | (1 << (DEFParser.K_GROUND - 189)) | (1 << (DEFParser.K_CLOCK - 189)) | (1 << (DEFParser.K_TIEOFF - 189)) | (1 << (DEFParser.K_ANALOG - 189)) | (1 << (DEFParser.K_SCAN - 189)) | (1 << (DEFParser.K_RESET - 189)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -5844,6 +5862,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 82, self.RULE_pin_layer_opt)
         try:
             self.state = 1093
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -6028,6 +6047,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 88, self.RULE_row_do_option)
         try:
             self.state = 1114
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -6092,6 +6112,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 90, self.RULE_row_step_option)
         try:
             self.state = 1120
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -6332,6 +6353,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 98, self.RULE_row_prop)
         try:
             self.state = 1148
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -6562,11 +6584,12 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 106, self.RULE_track_mask_statement)
         try:
             self.state = 1169
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__0, DEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_MASK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1166
@@ -6575,7 +6598,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 1168
                 self.same_mask()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6616,16 +6639,17 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 108, self.RULE_same_mask)
         try:
             self.state = 1173
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__0, DEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_SAMEMASK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1172
                 self.match(DEFParser.K_SAMEMASK)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6674,11 +6698,12 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 110, self.RULE_track_layer_statement)
         try:
             self.state = 1180
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1176
@@ -6687,7 +6712,7 @@ class DEFParser ( Parser ):
                 self.track_layer()
                 self.state = 1178
                 self.track_layers()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6733,18 +6758,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 112, self.RULE_track_layers)
         try:
             self.state = 1186
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.T_STRING]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1183
                 self.track_layer()
                 self.state = 1184
                 self.track_layers()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -7316,6 +7342,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 132, self.RULE_layer_stmt)
         try:
             self.state = 1276
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,31,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -7479,6 +7506,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 134, self.RULE_layer_viarule_opts)
         try:
             self.state = 1295
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -7716,6 +7744,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 142, self.RULE_pt)
         try:
             self.state = 1325
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -7806,11 +7835,12 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 144, self.RULE_mask)
         try:
             self.state = 1331
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.T__2]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1328
@@ -7819,7 +7849,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.K_MASK)
                 self.state = 1330
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -8276,6 +8306,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 160, self.RULE_region_option)
         try:
             self.state = 1386
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,39,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -8409,6 +8440,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 164, self.RULE_region_prop)
         try:
             self.state = 1402
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,41,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -8481,6 +8513,7 @@ class DEFParser ( Parser ):
             if not(_la==DEFParser.K_FENCE or _la==DEFParser.K_GUIDE):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -8624,6 +8657,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 172, self.RULE_start_comps)
         try:
             self.state = 1420
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_COMPS]:
                 self.enterOuterAlt(localctx, 1)
@@ -8633,7 +8667,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 1416
                 self.match(DEFParser.T__0)
-
+                pass
             elif token in [DEFParser.K_COMPONENTS]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1417
@@ -8642,7 +8676,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 1419
                 self.match(DEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -9008,6 +9042,7 @@ class DEFParser ( Parser ):
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 1456
+                    self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,45,self._ctx)
                     if la_ == 1:
                         localctx = DEFParser.Comp_net_listContext(self, _parentctx, _parentState)
@@ -9183,6 +9218,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 190, self.RULE_comp_option)
         try:
             self.state = 1481
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -9432,6 +9468,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 198, self.RULE_opt_pattern)
         try:
             self.state = 1496
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,49,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -9544,6 +9581,7 @@ class DEFParser ( Parser ):
             if not(((((_la - 212)) & ~0x3f) == 0 and ((1 << (_la - 212)) & ((1 << (DEFParser.K_NETLIST - 212)) | (1 << (DEFParser.K_DIST - 212)) | (1 << (DEFParser.K_USER - 212)) | (1 << (DEFParser.K_TIMING - 212)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -9590,6 +9628,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 204, self.RULE_comp_region)
         try:
             self.state = 1510
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,50,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -9780,16 +9819,17 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 210, self.RULE_halo_soft)
         try:
             self.state = 1535
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_SOFT]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1534
                 self.match(DEFParser.K_SOFT)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -10009,6 +10049,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 218, self.RULE_comp_prop)
         try:
             self.state = 1563
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,54,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -10177,19 +10218,20 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 224, self.RULE_opt_paren)
         try:
             self.state = 1577
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1574
                 self.pt()
-
+                pass
             elif token in [DEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1575
                 self.match(DEFParser.NUMBER)
                 self.state = 1576
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -10241,6 +10283,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 226, self.RULE_comp_type)
         try:
             self.state = 1590
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,56,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -10362,6 +10405,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 230, self.RULE_placement_status)
         try:
             self.state = 1602
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,57,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -10477,6 +10521,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 234, self.RULE_end_comps)
         try:
             self.state = 1612
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,58,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -10835,6 +10880,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 248, self.RULE_net_name)
         try:
             self.state = 1646
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T_STRING]:
                 self.enterOuterAlt(localctx, 1)
@@ -10842,7 +10888,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.T_STRING)
                 self.state = 1640
                 self.net_connections(0)
-
+                pass
             elif token in [DEFParser.K_MUSTJOIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1641
@@ -10855,7 +10901,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.T_STRING)
                 self.state = 1645
                 self.match(DEFParser.T__4)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -10971,6 +11017,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 252, self.RULE_net_connection)
         try:
             self.state = 1674
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,62,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11056,6 +11103,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 254, self.RULE_conn_opt)
         try:
             self.state = 1680
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,63,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11267,6 +11315,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 258, self.RULE_net_option)
         try:
             self.state = 1743
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,65,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11556,6 +11605,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 262, self.RULE_net_prop)
         try:
             self.state = 1761
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,67,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11637,6 +11687,7 @@ class DEFParser ( Parser ):
             if not(((((_la - 172)) & ~0x3f) == 0 and ((1 << (_la - 172)) & ((1 << (DEFParser.K_TEST - 172)) | (1 << (DEFParser.K_NETLIST - 172)) | (1 << (DEFParser.K_DIST - 172)) | (1 << (DEFParser.K_USER - 172)) | (1 << (DEFParser.K_TIMING - 172)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -11787,18 +11838,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 270, self.RULE_vpin_layer_opt)
         try:
             self.state = 1778
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1776
                 self.match(DEFParser.K_LAYER)
                 self.state = 1777
                 self.match(DEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -11847,6 +11899,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 272, self.RULE_vpin_options)
         try:
             self.state = 1785
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,69,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11913,6 +11966,7 @@ class DEFParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << DEFParser.K_FIXED) | (1 << DEFParser.K_COVER) | (1 << DEFParser.K_PLACED))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -11963,6 +12017,7 @@ class DEFParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << DEFParser.K_FIXED) | (1 << DEFParser.K_COVER) | (1 << DEFParser.K_ROUTED))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -12365,6 +12420,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 290, self.RULE_path_item)
         try:
             self.state = 1886
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,72,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -12585,6 +12641,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 292, self.RULE_path_pt)
         try:
             self.state = 1924
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,73,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -12731,6 +12788,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 294, self.RULE_virtual_pt)
         try:
             self.state = 1942
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,74,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -12940,17 +12998,18 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 300, self.RULE_opt_taper_style)
         try:
             self.state = 1961
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_STYLE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1959
                 self.opt_style()
-
+                pass
             elif token in [DEFParser.K_TAPER, DEFParser.K_TAPERRULE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1960
                 self.opt_taper()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -12997,19 +13056,20 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 302, self.RULE_opt_taper)
         try:
             self.state = 1966
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_TAPER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1963
                 self.match(DEFParser.K_TAPER)
-
+                pass
             elif token in [DEFParser.K_TAPERRULE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1964
                 self.match(DEFParser.K_TAPERRULE)
                 self.state = 1965
                 self.match(DEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -13169,6 +13229,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 308, self.RULE_opt_shape_style)
         try:
             self.state = 1985
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,79,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -13311,6 +13372,7 @@ class DEFParser ( Parser ):
             if not(((((_la - 197)) & ~0x3f) == 0 and ((1 << (_la - 197)) & ((1 << (DEFParser.K_RING - 197)) | (1 << (DEFParser.K_STRIPE - 197)) | (1 << (DEFParser.K_FOLLOWPIN - 197)) | (1 << (DEFParser.K_IOWIRE - 197)) | (1 << (DEFParser.K_COREWIRE - 197)) | (1 << (DEFParser.K_BLOCKWIRE - 197)) | (1 << (DEFParser.K_FILLWIRE - 197)) | (1 << (DEFParser.K_BLOCKAGEWIRE - 197)) | (1 << (DEFParser.K_PADRING - 197)) | (1 << (DEFParser.K_BLOCKRING - 197)) | (1 << (DEFParser.K_DRCFILL - 197)) | (1 << (DEFParser.K_FILLWIREOPC - 197)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -13592,6 +13654,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 322, self.RULE_snet_option)
         try:
             self.state = 2020
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,82,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -13767,6 +13830,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 324, self.RULE_snet_other_option)
         try:
             self.state = 2089
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,83,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -14009,6 +14073,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 326, self.RULE_shield_layer)
         try:
             self.state = 2093
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,84,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -14289,6 +14354,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 336, self.RULE_snet_prop)
         try:
             self.state = 2126
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,86,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -14358,6 +14424,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 338, self.RULE_opt_snet_range)
         try:
             self.state = 2132
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,87,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -14418,11 +14485,12 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 340, self.RULE_opt_range)
         try:
             self.state = 2138
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__0, DEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_RANGE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2135
@@ -14431,7 +14499,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2137
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -14487,6 +14555,7 @@ class DEFParser ( Parser ):
             if not(_la==DEFParser.K_WIREDLOGIC or ((((_la - 216)) & ~0x3f) == 0 and ((1 << (_la - 216)) & ((1 << (DEFParser.K_BALANCED - 216)) | (1 << (DEFParser.K_STEINER - 216)) | (1 << (DEFParser.K_TRUNK - 216)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -15282,6 +15351,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 372, self.RULE_group_option)
         try:
             self.state = 2222
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,93,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -15364,6 +15434,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 374, self.RULE_group_region)
         try:
             self.state = 2228
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__3]:
                 self.enterOuterAlt(localctx, 1)
@@ -15371,12 +15442,12 @@ class DEFParser ( Parser ):
                 self.pt()
                 self.state = 2225
                 self.pt()
-
+                pass
             elif token in [DEFParser.T_STRING]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2227
                 self.match(DEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -15491,6 +15562,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 378, self.RULE_group_prop)
         try:
             self.state = 2244
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,96,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -15628,6 +15700,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 382, self.RULE_group_soft_option)
         try:
             self.state = 2260
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_MAXX]:
                 self.enterOuterAlt(localctx, 1)
@@ -15635,21 +15708,21 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.K_MAXX)
                 self.state = 2255
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_MAXY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2256
                 self.match(DEFParser.K_MAXY)
                 self.state = 2257
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_MAXHALFPERIMETER]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2258
                 self.match(DEFParser.K_MAXHALFPERIMETER)
                 self.state = 2259
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -16000,6 +16073,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 396, self.RULE_constraint_rule)
         try:
             self.state = 2291
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,100,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -16120,6 +16194,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 400, self.RULE_operand)
         try:
             self.state = 2315
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_NET]:
                 self.enterOuterAlt(localctx, 1)
@@ -16127,7 +16202,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.K_NET)
                 self.state = 2299
                 self.match(DEFParser.T_STRING)
-
+                pass
             elif token in [DEFParser.K_PATH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2300
@@ -16140,7 +16215,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.T_STRING)
                 self.state = 2304
                 self.match(DEFParser.T_STRING)
-
+                pass
             elif token in [DEFParser.K_SUM]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2305
@@ -16151,7 +16226,7 @@ class DEFParser ( Parser ):
                 self.operand_list(0)
                 self.state = 2308
                 self.match(DEFParser.T__4)
-
+                pass
             elif token in [DEFParser.K_DIFF]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2310
@@ -16162,7 +16237,7 @@ class DEFParser ( Parser ):
                 self.operand_list(0)
                 self.state = 2313
                 self.match(DEFParser.T__4)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -16222,6 +16297,7 @@ class DEFParser ( Parser ):
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 2325
+                    self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,102,self._ctx)
                     if la_ == 1:
                         localctx = DEFParser.Operand_listContext(self, _parentctx, _parentState)
@@ -16351,16 +16427,17 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 406, self.RULE_opt_plus)
         try:
             self.state = 2340
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_MAXDIST]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.T__2]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2339
                 self.match(DEFParser.T__2)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -16478,6 +16555,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 410, self.RULE_delay_spec)
         try:
             self.state = 2362
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,106,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -16962,6 +17040,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 428, self.RULE_opt_pin)
         try:
             self.state = 2403
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,109,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17054,6 +17133,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 430, self.RULE_scan_member)
         try:
             self.state = 2427
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,110,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17168,6 +17248,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 432, self.RULE_opt_common_pins)
         try:
             self.state = 2442
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,111,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17357,6 +17438,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 438, self.RULE_floating_pins)
         try:
             self.state = 2480
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,113,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17574,6 +17656,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 444, self.RULE_ordered_pins)
         try:
             self.state = 2518
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,115,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17681,6 +17764,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 446, self.RULE_partition_maxbits)
         try:
             self.state = 2523
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,116,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -18133,6 +18217,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 462, self.RULE_iotiming_member)
         try:
             self.state = 2582
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,119,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -18287,18 +18372,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 466, self.RULE_iotiming_frompin)
         try:
             self.state = 2592
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_TOPIN]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.K_FROMPIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2590
                 self.match(DEFParser.K_FROMPIN)
                 self.state = 2591
                 self.match(DEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -18342,6 +18428,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 468, self.RULE_iotiming_parallel)
         try:
             self.state = 2597
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,121,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -18403,6 +18490,7 @@ class DEFParser ( Parser ):
             if not(_la==DEFParser.K_RISE or _la==DEFParser.K_FALL):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -18722,6 +18810,7 @@ class DEFParser ( Parser ):
             if not(_la==DEFParser.K_HORIZONTAL or _la==DEFParser.K_VERTICAL):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -18772,33 +18861,34 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 484, self.RULE_constraint_type)
         try:
             self.state = 2637
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_ALIGN]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2630
                 self.match(DEFParser.K_ALIGN)
-
+                pass
             elif token in [DEFParser.K_MAX]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2631
                 self.match(DEFParser.K_MAX)
                 self.state = 2632
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_MIN]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2633
                 self.match(DEFParser.K_MIN)
                 self.state = 2634
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_EQUAL]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2635
                 self.match(DEFParser.K_EQUAL)
                 self.state = 2636
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -18911,6 +19001,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 488, self.RULE_constrain_what)
         try:
             self.state = 2653
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,125,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19041,6 +19132,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 492, self.RULE_row_or_comp)
         try:
             self.state = 2671
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,127,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19289,6 +19381,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 500, self.RULE_timingdisables_rule)
         try:
             self.state = 2711
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,129,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19398,6 +19491,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 502, self.RULE_td_macro_option)
         try:
             self.state = 2719
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_FROMPIN]:
                 self.enterOuterAlt(localctx, 1)
@@ -19409,14 +19503,14 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.K_TOPIN)
                 self.state = 2716
                 self.match(DEFParser.T_STRING)
-
+                pass
             elif token in [DEFParser.K_THRUPIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2717
                 self.match(DEFParser.K_THRUPIN)
                 self.state = 2718
                 self.match(DEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -19767,6 +19861,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 516, self.RULE_turnoff)
         try:
             self.state = 2753
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,132,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19824,6 +19919,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 518, self.RULE_turnoff_setup)
         try:
             self.state = 2758
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,133,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19883,6 +19979,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 520, self.RULE_turnoff_hold)
         try:
             self.state = 2763
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,134,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -20045,6 +20142,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 524, self.RULE_partition_member)
         try:
             self.state = 2806
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,136,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -20299,6 +20397,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 530, self.RULE_min_or_max_member)
         try:
             self.state = 2826
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_MIN]:
                 self.enterOuterAlt(localctx, 1)
@@ -20308,7 +20407,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2822
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_MAX]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2823
@@ -20317,7 +20416,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2825
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -20499,6 +20598,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 536, self.RULE_risefallminmax1)
         try:
             self.state = 2852
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_RISEMIN]:
                 self.enterOuterAlt(localctx, 1)
@@ -20506,28 +20606,28 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.K_RISEMIN)
                 self.state = 2845
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_FALLMIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2846
                 self.match(DEFParser.K_FALLMIN)
                 self.state = 2847
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_RISEMAX]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2848
                 self.match(DEFParser.K_RISEMAX)
                 self.state = 2849
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_FALLMAX]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2850
                 self.match(DEFParser.K_FALLMAX)
                 self.state = 2851
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -20650,6 +20750,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 540, self.RULE_risefallminmax2)
         try:
             self.state = 2876
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_RISEMIN]:
                 self.enterOuterAlt(localctx, 1)
@@ -20659,7 +20760,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2866
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_FALLMIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2867
@@ -20668,7 +20769,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2869
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_RISEMAX]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2870
@@ -20677,7 +20778,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2872
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_FALLMAX]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2873
@@ -20686,7 +20787,7 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.NUMBER)
                 self.state = 2875
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -20890,18 +20991,19 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 548, self.RULE_subnet_opt_syn)
         try:
             self.state = 2898
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.T__4]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [DEFParser.T__2]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2896
                 self.match(DEFParser.T__2)
                 self.state = 2897
                 self.match(DEFParser.K_SYNTHESIZED)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -21018,6 +21120,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 552, self.RULE_subnet_option)
         try:
             self.state = 2913
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_FIXED, DEFParser.K_COVER, DEFParser.K_ROUTED, DEFParser.K_NOSHIELD]:
                 self.enterOuterAlt(localctx, 1)
@@ -21025,14 +21128,14 @@ class DEFParser ( Parser ):
                 self.subnet_type()
                 self.state = 2909
                 self.paths(0)
-
+                pass
             elif token in [DEFParser.K_NONDEFAULTRULE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2911
                 self.match(DEFParser.K_NONDEFAULTRULE)
                 self.state = 2912
                 self.match(DEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -21088,6 +21191,7 @@ class DEFParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << DEFParser.K_FIXED) | (1 << DEFParser.K_COVER) | (1 << DEFParser.K_ROUTED))) != 0) or _la==DEFParser.K_NOSHIELD):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -21226,6 +21330,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 560, self.RULE_opt_semi)
         try:
             self.state = 2927
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,148,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -21625,6 +21730,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 574, self.RULE_pin_prop_name_value)
         try:
             self.state = 2972
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,152,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -21963,6 +22069,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 586, self.RULE_blockage_rule)
         try:
             self.state = 3005
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,154,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -22103,6 +22210,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 590, self.RULE_layer_blockage_rule)
         try:
             self.state = 3023
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,156,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -22235,6 +22343,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 594, self.RULE_comp_blockage_rule)
         try:
             self.state = 3040
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,157,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -22396,6 +22505,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 598, self.RULE_placement_comp_rule)
         try:
             self.state = 3060
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,159,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -22561,6 +22671,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 602, self.RULE_rectPoly_blockage)
         try:
             self.state = 3080
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_RECT]:
                 self.enterOuterAlt(localctx, 1)
@@ -22570,7 +22681,7 @@ class DEFParser ( Parser ):
                 self.pt()
                 self.state = 3072
                 self.pt()
-
+                pass
             elif token in [DEFParser.K_POLYGON]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3074
@@ -22583,7 +22694,7 @@ class DEFParser ( Parser ):
                 self.nextPt()
                 self.state = 3078
                 self.otherPts(0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23021,6 +23132,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 618, self.RULE_geom_slot)
         try:
             self.state = 3128
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_RECT]:
                 self.enterOuterAlt(localctx, 1)
@@ -23030,7 +23142,7 @@ class DEFParser ( Parser ):
                 self.pt()
                 self.state = 3120
                 self.pt()
-
+                pass
             elif token in [DEFParser.K_POLYGON]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3122
@@ -23043,7 +23155,7 @@ class DEFParser ( Parser ):
                 self.nextPt()
                 self.state = 3126
                 self.otherPts(0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23310,6 +23422,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 628, self.RULE_fill_def)
         try:
             self.state = 3160
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,166,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -23523,6 +23636,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 634, self.RULE_geom_fill)
         try:
             self.state = 3186
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_RECT]:
                 self.enterOuterAlt(localctx, 1)
@@ -23532,7 +23646,7 @@ class DEFParser ( Parser ):
                 self.pt()
                 self.state = 3178
                 self.pt()
-
+                pass
             elif token in [DEFParser.K_POLYGON]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3180
@@ -23545,7 +23659,7 @@ class DEFParser ( Parser ):
                 self.nextPt()
                 self.state = 3184
                 self.otherPts(0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23656,6 +23770,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 638, self.RULE_opt_mask_opc_l)
         try:
             self.state = 3198
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,170,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -23864,6 +23979,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 646, self.RULE_opt_mask_opc)
         try:
             self.state = 3216
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,172,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -24404,6 +24520,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 666, self.RULE_nondefault_option)
         try:
             self.state = 3281
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,175,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -24579,6 +24696,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 670, self.RULE_nondefault_layer_option)
         try:
             self.state = 3297
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [DEFParser.K_DIAGWIDTH]:
                 self.enterOuterAlt(localctx, 1)
@@ -24586,21 +24704,21 @@ class DEFParser ( Parser ):
                 self.match(DEFParser.K_DIAGWIDTH)
                 self.state = 3292
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3293
                 self.match(DEFParser.K_SPACING)
                 self.state = 3294
                 self.match(DEFParser.NUMBER)
-
+                pass
             elif token in [DEFParser.K_WIREEXT]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3295
                 self.match(DEFParser.K_WIREEXT)
                 self.state = 3296
                 self.match(DEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -24762,6 +24880,7 @@ class DEFParser ( Parser ):
         self.enterRule(localctx, 676, self.RULE_nondefault_prop)
         try:
             self.state = 3317
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,179,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)

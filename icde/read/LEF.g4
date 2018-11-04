@@ -2119,8 +2119,8 @@ K_TWOEDGES                     : 'TWOEDGES' ;
 K_TWOWIDTHS                    : 'TWOWIDTHS' ;
 
 NUMBER                         : [\-]?[0-9]+ | [\-]?[0-9]+[.][0-9]+ ;
-T_STRING                       : [a-z0-9A-Z_\[\]\<\>\/]+ ;
-QSTRING                        : ["][a-z0-9A-Z_\[\]\<\>\/ ;.\n]+["] ;
+T_STRING                       : [a-z0-9A-Z_[\]<>/]+ ;
+QSTRING                        : ["][a-z0-9A-Z_[\]<>/ ;.\n]+["] ;
 
 COMMENT                        : '#' ~[\n]+ '\n'  -> skip;
 SPACE                          : [ \n\t] -> skip ;

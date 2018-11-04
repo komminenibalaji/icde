@@ -1,12 +1,13 @@
-# Generated from LEF.g4 by ANTLR 4.5.1
+# Generated from LEF.g4 by ANTLR 4.7.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
-from pprint import pprint
+from typing.io import TextIO
+import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\u01b4")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u01b4")
         buf.write("\u0e2f\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -490,12 +491,12 @@ def serializedATN():
         buf.write("t\u008b\u008b\6\2BBcc\u0093\u0093\u0095\u0095\3\2\u0126")
         buf.write("\u0128\4\2\u00d5\u00d6\u011e\u011f\3\2\u0120\u0122\4\2")
         buf.write("\u00e8\u00e8\u00ec\u00ec\4\2\61\61{{\4\2FF\\]\5\2\6\6")
-        buf.write("\13\f\u00df\u00e4\u0eec\2\u0258\3\2\2\2\4\u025b\3\2\2")
-        buf.write("\2\6\u0268\3\2\2\2\b\u0291\3\2\2\2\n\u0293\3\2\2\2\f\u0297")
-        buf.write("\3\2\2\2\16\u0299\3\2\2\2\20\u029d\3\2\2\2\22\u02a7\3")
-        buf.write("\2\2\2\24\u02af\3\2\2\2\26\u02b1\3\2\2\2\30\u02b4\3\2")
-        buf.write("\2\2\32\u02b8\3\2\2\2\34\u02bd\3\2\2\2\36\u02c1\3\2\2")
-        buf.write("\2 \u02c3\3\2\2\2\"\u02c5\3\2\2\2$\u02c7\3\2\2\2&\u02cc")
+        buf.write("\13\f\u00df\u00e4\2\u0eec\2\u0258\3\2\2\2\4\u025b\3\2")
+        buf.write("\2\2\6\u0268\3\2\2\2\b\u0291\3\2\2\2\n\u0293\3\2\2\2\f")
+        buf.write("\u0297\3\2\2\2\16\u0299\3\2\2\2\20\u029d\3\2\2\2\22\u02a7")
+        buf.write("\3\2\2\2\24\u02af\3\2\2\2\26\u02b1\3\2\2\2\30\u02b4\3")
+        buf.write("\2\2\2\32\u02b8\3\2\2\2\34\u02bd\3\2\2\2\36\u02c1\3\2")
+        buf.write("\2\2 \u02c3\3\2\2\2\"\u02c5\3\2\2\2$\u02c7\3\2\2\2&\u02cc")
         buf.write("\3\2\2\2(\u02ce\3\2\2\2*\u02fd\3\2\2\2,\u02ff\3\2\2\2")
         buf.write(".\u0307\3\2\2\2\60\u030d\3\2\2\2\62\u030f\3\2\2\2\64\u0485")
         buf.write("\3\2\2\2\66\u0489\3\2\2\28\u048e\3\2\2\2:\u0494\3\2\2")
@@ -1739,7 +1740,7 @@ def serializedATN():
         buf.write("\7\5\2\2\u0c4f\u0c59\3\2\2\2\u0c50\u0c51\7\u00da\2\2\u0c51")
         buf.write("\u0c52\5\u01f6\u00fc\2\u0c52\u0c53\7\u00db\2\2\u0c53\u0c54")
         buf.write("\5\u01f4\u00fb\2\u0c54\u0c55\7\u00dc\2\2\u0c55\u0c56\5")
-        buf.write("\u01f4\u00fb\2\u0c56\u0c59\3\2\2\2\u0c57\u0c59\5\f\7\2")
+        buf.write("\u01f4\u00fb\4\u0c56\u0c59\3\2\2\2\u0c57\u0c59\5\f\7\2")
         buf.write("\u0c58\u0c49\3\2\2\2\u0c58\u0c4c\3\2\2\2\u0c58\u0c50\3")
         buf.write("\2\2\2\u0c58\u0c57\3\2\2\2\u0c59\u0c68\3\2\2\2\u0c5a\u0c5b")
         buf.write("\f\n\2\2\u0c5b\u0c5c\7\7\2\2\u0c5c\u0c67\5\u01f4\u00fb")
@@ -1750,204 +1751,204 @@ def serializedATN():
         buf.write("\3\2\2\2\u0c66\u0c5d\3\2\2\2\u0c66\u0c60\3\2\2\2\u0c66")
         buf.write("\u0c63\3\2\2\2\u0c67\u0c6a\3\2\2\2\u0c68\u0c66\3\2\2\2")
         buf.write("\u0c68\u0c69\3\2\2\2\u0c69\u01f5\3\2\2\2\u0c6a\u0c68\3")
-        buf.write("\2\2\2\u0c6b\u0c6c\b\u00fc\1\2\u0c6c\u0c6d\7\u00e7\2\2")
-        buf.write("\u0c6d\u0c94\5\u01f6\u00fc\7\u0c6e\u0c6f\5\u01f4\u00fb")
-        buf.write("\2\u0c6f\u0c70\5\u01fa\u00fe\2\u0c70\u0c71\5\u01f4\u00fb")
-        buf.write("\2\u0c71\u0c94\3\2\2\2\u0c72\u0c73\5\u01f4\u00fb\2\u0c73")
-        buf.write("\u0c74\7\u00e6\2\2\u0c74\u0c75\5\u01f4\u00fb\2\u0c75\u0c94")
-        buf.write("\3\2\2\2\u0c76\u0c77\5\u01f4\u00fb\2\u0c77\u0c78\7\u00e5")
-        buf.write("\2\2\u0c78\u0c79\5\u01f4\u00fb\2\u0c79\u0c94\3\2\2\2\u0c7a")
-        buf.write("\u0c7b\5\u01f8\u00fd\2\u0c7b\u0c7c\5\u01fa\u00fe\2\u0c7c")
-        buf.write("\u0c7d\5\u01f8\u00fd\2\u0c7d\u0c94\3\2\2\2\u0c7e\u0c7f")
-        buf.write("\5\u01f8\u00fd\2\u0c7f\u0c80\7\u00e6\2\2\u0c80\u0c81\5")
-        buf.write("\u01f8\u00fd\2\u0c81\u0c94\3\2\2\2\u0c82\u0c83\5\u01f8")
-        buf.write("\u00fd\2\u0c83\u0c84\7\u00e5\2\2\u0c84\u0c85\5\u01f8\u00fd")
-        buf.write("\2\u0c85\u0c94\3\2\2\2\u0c86\u0c87\7\4\2\2\u0c87\u0c88")
-        buf.write("\5\u01f6\u00fc\2\u0c88\u0c89\7\5\2\2\u0c89\u0c94\3\2\2")
-        buf.write("\2\u0c8a\u0c8b\7\u00da\2\2\u0c8b\u0c8c\5\u01f6\u00fc\2")
-        buf.write("\u0c8c\u0c8d\7\u00db\2\2\u0c8d\u0c8e\5\u01f6\u00fc\2\u0c8e")
-        buf.write("\u0c8f\7\u00dc\2\2\u0c8f\u0c90\5\u01f6\u00fc\2\u0c90\u0c94")
-        buf.write("\3\2\2\2\u0c91\u0c94\7\u00de\2\2\u0c92\u0c94\7\u00dd\2")
-        buf.write("\2\u0c93\u0c6b\3\2\2\2\u0c93\u0c6e\3\2\2\2\u0c93\u0c72")
-        buf.write("\3\2\2\2\u0c93\u0c76\3\2\2\2\u0c93\u0c7a\3\2\2\2\u0c93")
-        buf.write("\u0c7e\3\2\2\2\u0c93\u0c82\3\2\2\2\u0c93\u0c86\3\2\2\2")
-        buf.write("\u0c93\u0c8a\3\2\2\2\u0c93\u0c91\3\2\2\2\u0c93\u0c92\3")
-        buf.write("\2\2\2\u0c94\u0ca3\3\2\2\2\u0c95\u0c96\f\13\2\2\u0c96")
-        buf.write("\u0c97\7\u00df\2\2\u0c97\u0ca2\5\u01f6\u00fc\f\u0c98\u0c99")
-        buf.write("\f\n\2\2\u0c99\u0c9a\7\u00e0\2\2\u0c9a\u0ca2\5\u01f6\u00fc")
-        buf.write("\13\u0c9b\u0c9c\f\t\2\2\u0c9c\u0c9d\7\u00e6\2\2\u0c9d")
-        buf.write("\u0ca2\5\u01f6\u00fc\n\u0c9e\u0c9f\f\b\2\2\u0c9f\u0ca0")
-        buf.write("\7\u00e5\2\2\u0ca0\u0ca2\5\u01f6\u00fc\t\u0ca1\u0c95\3")
-        buf.write("\2\2\2\u0ca1\u0c98\3\2\2\2\u0ca1\u0c9b\3\2\2\2\u0ca1\u0c9e")
-        buf.write("\3\2\2\2\u0ca2\u0ca5\3\2\2\2\u0ca3\u0ca1\3\2\2\2\u0ca3")
-        buf.write("\u0ca4\3\2\2\2\u0ca4\u01f7\3\2\2\2\u0ca5\u0ca3\3\2\2\2")
-        buf.write("\u0ca6\u0ca7\b\u00fd\1\2\u0ca7\u0ca8\7\4\2\2\u0ca8\u0ca9")
-        buf.write("\5\u01f8\u00fd\2\u0ca9\u0caa\7\5\2\2\u0caa\u0cb4\3\2\2")
-        buf.write("\2\u0cab\u0cac\7\u00da\2\2\u0cac\u0cad\5\u01f6\u00fc\2")
-        buf.write("\u0cad\u0cae\7\u00db\2\2\u0cae\u0caf\5\u01f8\u00fd\2\u0caf")
-        buf.write("\u0cb0\7\u00dc\2\2\u0cb0\u0cb1\5\u01f8\u00fd\2\u0cb1\u0cb4")
-        buf.write("\3\2\2\2\u0cb2\u0cb4\7\u01b2\2\2\u0cb3\u0ca6\3\2\2\2\u0cb3")
-        buf.write("\u0cab\3\2\2\2\u0cb3\u0cb2\3\2\2\2\u0cb4\u0cba\3\2\2\2")
-        buf.write("\u0cb5\u0cb6\f\6\2\2\u0cb6\u0cb7\7\7\2\2\u0cb7\u0cb9\5")
-        buf.write("\u01f8\u00fd\7\u0cb8\u0cb5\3\2\2\2\u0cb9\u0cbc\3\2\2\2")
-        buf.write("\u0cba\u0cb8\3\2\2\2\u0cba\u0cbb\3\2\2\2\u0cbb\u01f9\3")
-        buf.write("\2\2\2\u0cbc\u0cba\3\2\2\2\u0cbd\u0cbe\t\27\2\2\u0cbe")
-        buf.write("\u01fb\3\2\2\2\u0cbf\u0cc0\7\u00ee\2\2\u0cc0\u0cc1\5\u01fe")
-        buf.write("\u0100\2\u0cc1\u0cc2\7/\2\2\u0cc2\u0cc3\7\u00ee\2\2\u0cc3")
-        buf.write("\u01fd\3\2\2\2\u0cc4\u0cc9\b\u0100\1\2\u0cc5\u0cc6\f\3")
-        buf.write("\2\2\u0cc6\u0cc8\5\u0200\u0101\2\u0cc7\u0cc5\3\2\2\2\u0cc8")
-        buf.write("\u0ccb\3\2\2\2\u0cc9\u0cc7\3\2\2\2\u0cc9\u0cca\3\2\2\2")
-        buf.write("\u0cca\u01ff\3\2\2\2\u0ccb\u0cc9\3\2\2\2\u0ccc\u0ccd\7")
-        buf.write("M\2\2\u0ccd\u0cce\7\u01b1\2\2\u0cce\u0ccf\5\u0202\u0102")
-        buf.write("\2\u0ccf\u0cd0\7\3\2\2\u0cd0\u0cf5\3\2\2\2\u0cd1\u0cd2")
-        buf.write("\7D\2\2\u0cd2\u0cd3\7\u01b1\2\2\u0cd3\u0cd4\5\u0202\u0102")
-        buf.write("\2\u0cd4\u0cd5\7\3\2\2\u0cd5\u0cf5\3\2\2\2\u0cd6\u0cd7")
-        buf.write("\7n\2\2\u0cd7\u0cd8\7\u01b1\2\2\u0cd8\u0cd9\5\u0202\u0102")
-        buf.write("\2\u0cd9\u0cda\7\3\2\2\u0cda\u0cf5\3\2\2\2\u0cdb\u0cdc")
-        buf.write("\7N\2\2\u0cdc\u0cdd\7\u01b1\2\2\u0cdd\u0cde\5\u0202\u0102")
-        buf.write("\2\u0cde\u0cdf\7\3\2\2\u0cdf\u0cf5\3\2\2\2\u0ce0\u0ce1")
-        buf.write("\7\u00ac\2\2\u0ce1\u0ce2\7\u01b1\2\2\u0ce2\u0ce3\5\u0202")
-        buf.write("\u0102\2\u0ce3\u0ce4\7\3\2\2\u0ce4\u0cf5\3\2\2\2\u0ce5")
-        buf.write("\u0ce6\7\u00ad\2\2\u0ce6\u0ce7\7\u01b1\2\2\u0ce7\u0ce8")
-        buf.write("\5\u0202\u0102\2\u0ce8\u0ce9\7\3\2\2\u0ce9\u0cf5\3\2\2")
-        buf.write("\2\u0cea\u0ceb\7J\2\2\u0ceb\u0cec\7\u01b1\2\2\u0cec\u0ced")
-        buf.write("\5\u0202\u0102\2\u0ced\u0cee\7\3\2\2\u0cee\u0cf5\3\2\2")
-        buf.write("\2\u0cef\u0cf0\7[\2\2\u0cf0\u0cf1\7\u01b1\2\2\u0cf1\u0cf2")
-        buf.write("\5\u0202\u0102\2\u0cf2\u0cf3\7\3\2\2\u0cf3\u0cf5\3\2\2")
-        buf.write("\2\u0cf4\u0ccc\3\2\2\2\u0cf4\u0cd1\3\2\2\2\u0cf4\u0cd6")
-        buf.write("\3\2\2\2\u0cf4\u0cdb\3\2\2\2\u0cf4\u0ce0\3\2\2\2\u0cf4")
-        buf.write("\u0ce5\3\2\2\2\u0cf4\u0cea\3\2\2\2\u0cf4\u0cef\3\2\2\2")
-        buf.write("\u0cf5\u0201\3\2\2\2\u0cf6\u0cf7\7\u00f0\2\2\u0cf7\u0cf8")
-        buf.write("\5\u020c\u0107\2\u0cf8\u0cf9\5\u0210\u0109\2\u0cf9\u0d04")
-        buf.write("\3\2\2\2\u0cfa\u0cfb\7\u00f1\2\2\u0cfb\u0cfc\5\u020c\u0107")
-        buf.write("\2\u0cfc\u0cfd\5\u020e\u0108\2\u0cfd\u0d04\3\2\2\2\u0cfe")
-        buf.write("\u0d04\7\u00ef\2\2\u0cff\u0d00\7\u00ef\2\2\u0d00\u0d04")
-        buf.write("\7\u01b2\2\2\u0d01\u0d02\7\u0114\2\2\u0d02\u0d04\7\u01b1")
-        buf.write("\2\2\u0d03\u0cf6\3\2\2\2\u0d03\u0cfa\3\2\2\2\u0d03\u0cfe")
-        buf.write("\3\2\2\2\u0d03\u0cff\3\2\2\2\u0d03\u0d01\3\2\2\2\u0d04")
-        buf.write("\u0203\3\2\2\2\u0d05\u0d14\3\2\2\2\u0d06\u0d14\7\u0131")
-        buf.write("\2\2\u0d07\u0d08\7\37\2\2\u0d08\u0d14\5\f\7\2\u0d09\u0d0a")
-        buf.write("\7\37\2\2\u0d0a\u0d0b\5\f\7\2\u0d0b\u0d0c\7\u00f2\2\2")
-        buf.write("\u0d0c\u0d0d\5\f\7\2\u0d0d\u0d0e\5\f\7\2\u0d0e\u0d14\3")
-        buf.write("\2\2\2\u0d0f\u0d10\7\u00f2\2\2\u0d10\u0d11\5\f\7\2\u0d11")
-        buf.write("\u0d12\5\f\7\2\u0d12\u0d14\3\2\2\2\u0d13\u0d05\3\2\2\2")
-        buf.write("\u0d13\u0d06\3\2\2\2\u0d13\u0d07\3\2\2\2\u0d13\u0d09\3")
-        buf.write("\2\2\2\u0d13\u0d0f\3\2\2\2\u0d14\u0205\3\2\2\2\u0d15\u0d1d")
-        buf.write("\3\2\2\2\u0d16\u0d17\7\u01aa\2\2\u0d17\u0d18\5\f\7\2\u0d18")
-        buf.write("\u0d19\7\u0179\2\2\u0d19\u0d1a\5\f\7\2\u0d1a\u0d1b\5\u0208")
-        buf.write("\u0105\2\u0d1b\u0d1d\3\2\2\2\u0d1c\u0d15\3\2\2\2\u0d1c")
-        buf.write("\u0d16\3\2\2\2\u0d1d\u0207\3\2\2\2\u0d1e\u0d21\3\2\2\2")
-        buf.write("\u0d1f\u0d21\7\u01ae\2\2\u0d20\u0d1e\3\2\2\2\u0d20\u0d1f")
-        buf.write("\3\2\2\2\u0d21\u0209\3\2\2\2\u0d22\u0d25\3\2\2\2\u0d23")
-        buf.write("\u0d25\7\u01ac\2\2\u0d24\u0d22\3\2\2\2\u0d24\u0d23\3\2")
-        buf.write("\2\2\u0d25\u020b\3\2\2\2\u0d26\u0d2c\3\2\2\2\u0d27\u0d28")
-        buf.write("\7\u00f2\2\2\u0d28\u0d29\5\f\7\2\u0d29\u0d2a\5\f\7\2\u0d2a")
-        buf.write("\u0d2c\3\2\2\2\u0d2b\u0d26\3\2\2\2\u0d2b\u0d27\3\2\2\2")
-        buf.write("\u0d2c\u020d\3\2\2\2\u0d2d\u0d30\3\2\2\2\u0d2e\u0d30\7")
-        buf.write("\u01b0\2\2\u0d2f\u0d2d\3\2\2\2\u0d2f\u0d2e\3\2\2\2\u0d30")
-        buf.write("\u020f\3\2\2\2\u0d31\u0d34\3\2\2\2\u0d32\u0d34\5\f\7\2")
-        buf.write("\u0d33\u0d31\3\2\2\2\u0d33\u0d32\3\2\2\2\u0d34\u0211\3")
-        buf.write("\2\2\2\u0d35\u0d3a\3\2\2\2\u0d36\u0d37\5\u0214\u010b\2")
-        buf.write("\u0d37\u0d38\5\u0212\u010a\2\u0d38\u0d3a\3\2\2\2\u0d39")
-        buf.write("\u0d35\3\2\2\2\u0d39\u0d36\3\2\2\2\u0d3a\u0213\3\2\2\2")
-        buf.write("\u0d3b\u0d40\7\u017c\2\2\u0d3c\u0d3d\7\u0087\2\2\u0d3d")
-        buf.write("\u0d40\5\u020a\u0106\2\u0d3e\u0d40\7\u01ab\2\2\u0d3f\u0d3b")
-        buf.write("\3\2\2\2\u0d3f\u0d3c\3\2\2\2\u0d3f\u0d3e\3\2\2\2\u0d40")
-        buf.write("\u0215\3\2\2\2\u0d41\u0d6a\3\2\2\2\u0d42\u0d43\7J\2\2")
-        buf.write("\u0d43\u0d44\7\u01b1\2\2\u0d44\u0d6a\5\u0218\u010d\2\u0d45")
-        buf.write("\u0d46\7\u0162\2\2\u0d46\u0d47\5\f\7\2\u0d47\u0d48\7\u0179")
-        buf.write("\2\2\u0d48\u0d49\5\f\7\2\u0d49\u0d4a\5\u021a\u010e\2\u0d4a")
-        buf.write("\u0d6a\3\2\2\2\u0d4b\u0d4c\7\23\2\2\u0d4c\u0d6a\7\u01b0")
-        buf.write("\2\2\u0d4d\u0d4e\7\u00f2\2\2\u0d4e\u0d4f\5\f\7\2\u0d4f")
-        buf.write("\u0d50\5\f\7\2\u0d50\u0d51\5\u0204\u0103\2\u0d51\u0d6a")
-        buf.write("\3\2\2\2\u0d52\u0d53\7\u0132\2\2\u0d53\u0d6a\5\f\7\2\u0d54")
-        buf.write("\u0d55\7\u0132\2\2\u0d55\u0d56\5\f\7\2\u0d56\u0d57\7\u00f2")
-        buf.write("\2\2\u0d57\u0d58\5\f\7\2\u0d58\u0d59\5\f\7\2\u0d59\u0d6a")
-        buf.write("\3\2\2\2\u0d5a\u0d5b\7\u01a0\2\2\u0d5b\u0d5c\5\f\7\2\u0d5c")
-        buf.write("\u0d5d\7\u0179\2\2\u0d5d\u0d5e\5\f\7\2\u0d5e\u0d5f\5\u0206")
-        buf.write("\u0104\2\u0d5f\u0d6a\3\2\2\2\u0d60\u0d61\7\u01a7\2\2\u0d61")
-        buf.write("\u0d6a\5\f\7\2\u0d62\u0d63\7\u01a1\2\2\u0d63\u0d64\5\f")
-        buf.write("\7\2\u0d64\u0d65\7\u01a8\2\2\u0d65\u0d66\5\f\7\2\u0d66")
-        buf.write("\u0d67\7\u01a7\2\2\u0d67\u0d68\5\f\7\2\u0d68\u0d6a\3\2")
-        buf.write("\2\2\u0d69\u0d41\3\2\2\2\u0d69\u0d42\3\2\2\2\u0d69\u0d45")
-        buf.write("\3\2\2\2\u0d69\u0d4b\3\2\2\2\u0d69\u0d4d\3\2\2\2\u0d69")
-        buf.write("\u0d52\3\2\2\2\u0d69\u0d54\3\2\2\2\u0d69\u0d5a\3\2\2\2")
-        buf.write("\u0d69\u0d60\3\2\2\2\u0d69\u0d62\3\2\2\2\u0d6a\u0217\3")
-        buf.write("\2\2\2\u0d6b\u0d6e\3\2\2\2\u0d6c\u0d6e\7\u0092\2\2\u0d6d")
-        buf.write("\u0d6b\3\2\2\2\u0d6d\u0d6c\3\2\2\2\u0d6e\u0219\3\2\2\2")
-        buf.write("\u0d6f\u0d72\3\2\2\2\u0d70\u0d72\7\u01a3\2\2\u0d71\u0d6f")
-        buf.write("\3\2\2\2\u0d71\u0d70\3\2\2\2\u0d72\u021b\3\2\2\2\u0d73")
-        buf.write("\u0d77\3\2\2\2\u0d74\u0d75\7J\2\2\u0d75\u0d77\7\u01b1")
-        buf.write("\2\2\u0d76\u0d73\3\2\2\2\u0d76\u0d74\3\2\2\2\u0d77\u021d")
-        buf.write("\3\2\2\2\u0d78\u0d79\7J\2\2\u0d79\u0d7a\7\u01b1\2\2\u0d7a")
-        buf.write("\u021f\3\2\2\2\u0d7b\u0d7c\7\u00f9\2\2\u0d7c\u0d7d\5\f")
-        buf.write("\7\2\u0d7d\u0d7e\5\f\7\2\u0d7e\u0d7f\7\3\2\2\u0d7f\u0221")
-        buf.write("\3\2\2\2\u0d80\u0d81\7\u00fa\2\2\u0d81\u0d82\5\f\7\2\u0d82")
-        buf.write("\u0d83\7\3\2\2\u0d83\u0223\3\2\2\2\u0d84\u0d85\7\u00fd")
-        buf.write("\2\2\u0d85\u0d86\5\f\7\2\u0d86\u0d87\7\3\2\2\u0d87\u0225")
-        buf.write("\3\2\2\2\u0d88\u0d89\7\u00fc\2\2\u0d89\u0d8a\5\f\7\2\u0d8a")
-        buf.write("\u0d8b\7\3\2\2\u0d8b\u0227\3\2\2\2\u0d8c\u0d8d\7\u00ff")
-        buf.write("\2\2\u0d8d\u0d8e\5\f\7\2\u0d8e\u0d8f\7\3\2\2\u0d8f\u0d90")
-        buf.write("\5\u022c\u0117\2\u0d90\u0d91\5\u022a\u0116\2\u0d91\u0d92")
-        buf.write("\7\3\2\2\u0d92\u0229\3\2\2\2\u0d93\u0d94\7/\2\2\u0d94")
-        buf.write("\u0d95\7\u00ff\2\2\u0d95\u022b\3\2\2\2\u0d96\u0d97\b\u0117")
-        buf.write("\1\2\u0d97\u0d98\5\u022e\u0118\2\u0d98\u0d9d\3\2\2\2\u0d99")
-        buf.write("\u0d9a\f\3\2\2\u0d9a\u0d9c\5\u022e\u0118\2\u0d9b\u0d99")
-        buf.write("\3\2\2\2\u0d9c\u0d9f\3\2\2\2\u0d9d\u0d9b\3\2\2\2\u0d9d")
-        buf.write("\u0d9e\3\2\2\2\u0d9e\u022d\3\2\2\2\u0d9f\u0d9d\3\2\2\2")
-        buf.write("\u0da0\u0da1\7\u0100\2\2\u0da1\u0da2\5\f\7\2\u0da2\u0da3")
-        buf.write("\7\3\2\2\u0da3\u0da6\3\2\2\2\u0da4\u0da6\5\u0230\u0119")
-        buf.write("\2\u0da5\u0da0\3\2\2\2\u0da5\u0da4\3\2\2\2\u0da6\u022f")
-        buf.write("\3\2\2\2\u0da7\u0da8\7\u0101\2\2\u0da8\u0da9\5\u0232\u011a")
-        buf.write("\2\u0da9\u0daa\7\3\2\2\u0daa\u0dab\5\u0234\u011b\2\u0dab")
-        buf.write("\u0231\3\2\2\2\u0dac\u0dad\b\u011a\1\2\u0dad\u0dae\5\f")
-        buf.write("\7\2\u0dae\u0db3\3\2\2\2\u0daf\u0db0\f\3\2\2\u0db0\u0db2")
-        buf.write("\5\f\7\2\u0db1\u0daf\3\2\2\2\u0db2\u0db5\3\2\2\2\u0db3")
-        buf.write("\u0db1\3\2\2\2\u0db3\u0db4\3\2\2\2\u0db4\u0233\3\2\2\2")
-        buf.write("\u0db5\u0db3\3\2\2\2\u0db6\u0db7\b\u011b\1\2\u0db7\u0db8")
-        buf.write("\5\u0236\u011c\2\u0db8\u0dbd\3\2\2\2\u0db9\u0dba\f\3\2")
-        buf.write("\2\u0dba\u0dbc\5\u0236\u011c\2\u0dbb\u0db9\3\2\2\2\u0dbc")
-        buf.write("\u0dbf\3\2\2\2\u0dbd\u0dbb\3\2\2\2\u0dbd\u0dbe\3\2\2\2")
-        buf.write("\u0dbe\u0235\3\2\2\2\u0dbf\u0dbd\3\2\2\2\u0dc0\u0dc1\7")
-        buf.write("\u0102\2\2\u0dc1\u0dc2\5\f\7\2\u0dc2\u0dc3\7\3\2\2\u0dc3")
-        buf.write("\u0dc4\7\u00fe\2\2\u0dc4\u0dc5\5\u0238\u011d\2\u0dc5\u0dc6")
-        buf.write("\7\3\2\2\u0dc6\u0237\3\2\2\2\u0dc7\u0dc8\b\u011d\1\2\u0dc8")
-        buf.write("\u0dc9\5\f\7\2\u0dc9\u0dce\3\2\2\2\u0dca\u0dcb\f\3\2\2")
-        buf.write("\u0dcb\u0dcd\5\f\7\2\u0dcc\u0dca\3\2\2\2\u0dcd\u0dd0\3")
-        buf.write("\2\2\2\u0dce\u0dcc\3\2\2\2\u0dce\u0dcf\3\2\2\2\u0dcf\u0239")
-        buf.write("\3\2\2\2\u0dd0\u0dce\3\2\2\2\u0dd1\u0dd2\7\u00fb\2\2\u0dd2")
-        buf.write("\u0dd3\5\f\7\2\u0dd3\u0dd4\7\3\2\2\u0dd4\u0dd5\5\u023e")
-        buf.write("\u0120\2\u0dd5\u0dd6\5\u023c\u011f\2\u0dd6\u0dd7\7\3\2")
-        buf.write("\2\u0dd7\u023b\3\2\2\2\u0dd8\u0dd9\7/\2\2\u0dd9\u0dda")
-        buf.write("\7\u00fb\2\2\u0dda\u023d\3\2\2\2\u0ddb\u0ddc\b\u0120\1")
-        buf.write("\2\u0ddc\u0ddd\5\u0240\u0121\2\u0ddd\u0de2\3\2\2\2\u0dde")
-        buf.write("\u0ddf\f\3\2\2\u0ddf\u0de1\5\u0240\u0121\2\u0de0\u0dde")
-        buf.write("\3\2\2\2\u0de1\u0de4\3\2\2\2\u0de2\u0de0\3\2\2\2\u0de2")
-        buf.write("\u0de3\3\2\2\2\u0de3\u023f\3\2\2\2\u0de4\u0de2\3\2\2\2")
-        buf.write("\u0de5\u0de6\7\u0100\2\2\u0de6\u0de7\5\f\7\2\u0de7\u0de8")
-        buf.write("\7\3\2\2\u0de8\u0deb\3\2\2\2\u0de9\u0deb\5\u0242\u0122")
-        buf.write("\2\u0dea\u0de5\3\2\2\2\u0dea\u0de9\3\2\2\2\u0deb\u0241")
-        buf.write("\3\2\2\2\u0dec\u0ded\7\u0101\2\2\u0ded\u0dee\5\u0244\u0123")
-        buf.write("\2\u0dee\u0def\7\3\2\2\u0def\u0df0\5\u0246\u0124\2\u0df0")
-        buf.write("\u0243\3\2\2\2\u0df1\u0df2\b\u0123\1\2\u0df2\u0df3\5\f")
-        buf.write("\7\2\u0df3\u0df8\3\2\2\2\u0df4\u0df5\f\3\2\2\u0df5\u0df7")
-        buf.write("\5\f\7\2\u0df6\u0df4\3\2\2\2\u0df7\u0dfa\3\2\2\2\u0df8")
-        buf.write("\u0df6\3\2\2\2\u0df8\u0df9\3\2\2\2\u0df9\u0245\3\2\2\2")
-        buf.write("\u0dfa\u0df8\3\2\2\2\u0dfb\u0dfc\b\u0124\1\2\u0dfc\u0dfd")
-        buf.write("\5\u0248\u0125\2\u0dfd\u0e02\3\2\2\2\u0dfe\u0dff\f\3\2")
-        buf.write("\2\u0dff\u0e01\5\u0248\u0125\2\u0e00\u0dfe\3\2\2\2\u0e01")
-        buf.write("\u0e04\3\2\2\2\u0e02\u0e00\3\2\2\2\u0e02\u0e03\3\2\2\2")
-        buf.write("\u0e03\u0247\3\2\2\2\u0e04\u0e02\3\2\2\2\u0e05\u0e06\7")
-        buf.write("\u0102\2\2\u0e06\u0e07\5\f\7\2\u0e07\u0e08\7\3\2\2\u0e08")
-        buf.write("\u0e09\7\u0103\2\2\u0e09\u0e0a\5\u024a\u0126\2\u0e0a\u0e0b")
-        buf.write("\7\3\2\2\u0e0b\u0249\3\2\2\2\u0e0c\u0e0d\b\u0126\1\2\u0e0d")
-        buf.write("\u0e0e\5\f\7\2\u0e0e\u0e13\3\2\2\2\u0e0f\u0e10\f\3\2\2")
-        buf.write("\u0e10\u0e12\5\f\7\2\u0e11\u0e0f\3\2\2\2\u0e12\u0e15\3")
-        buf.write("\2\2\2\u0e13\u0e11\3\2\2\2\u0e13\u0e14\3\2\2\2\u0e14\u024b")
-        buf.write("\3\2\2\2\u0e15\u0e13\3\2\2\2\u0e16\u0e17\7\u0105\2\2\u0e17")
-        buf.write("\u0e18\5\f\7\2\u0e18\u0e19\7\3\2\2\u0e19\u024d\3\2\2\2")
-        buf.write("\u0e1a\u0e1b\7\u0104\2\2\u0e1b\u0e1c\5\f\7\2\u0e1c\u0e1d")
-        buf.write("\7\3\2\2\u0e1d\u024f\3\2\2\2\u0e1e\u0e1f\7\u0106\2\2\u0e1f")
+        buf.write("\2\2\2\u0c6b\u0c6c\b\u00fc\1\2\u0c6c\u0c6d\5\u01f4\u00fb")
+        buf.write("\2\u0c6d\u0c6e\5\u01fa\u00fe\2\u0c6e\u0c6f\5\u01f4\u00fb")
+        buf.write("\2\u0c6f\u0c94\3\2\2\2\u0c70\u0c71\5\u01f4\u00fb\2\u0c71")
+        buf.write("\u0c72\7\u00e6\2\2\u0c72\u0c73\5\u01f4\u00fb\2\u0c73\u0c94")
+        buf.write("\3\2\2\2\u0c74\u0c75\5\u01f4\u00fb\2\u0c75\u0c76\7\u00e5")
+        buf.write("\2\2\u0c76\u0c77\5\u01f4\u00fb\2\u0c77\u0c94\3\2\2\2\u0c78")
+        buf.write("\u0c79\5\u01f8\u00fd\2\u0c79\u0c7a\5\u01fa\u00fe\2\u0c7a")
+        buf.write("\u0c7b\5\u01f8\u00fd\2\u0c7b\u0c94\3\2\2\2\u0c7c\u0c7d")
+        buf.write("\5\u01f8\u00fd\2\u0c7d\u0c7e\7\u00e6\2\2\u0c7e\u0c7f\5")
+        buf.write("\u01f8\u00fd\2\u0c7f\u0c94\3\2\2\2\u0c80\u0c81\5\u01f8")
+        buf.write("\u00fd\2\u0c81\u0c82\7\u00e5\2\2\u0c82\u0c83\5\u01f8\u00fd")
+        buf.write("\2\u0c83\u0c94\3\2\2\2\u0c84\u0c85\7\u00e7\2\2\u0c85\u0c94")
+        buf.write("\5\u01f6\u00fc\7\u0c86\u0c87\7\4\2\2\u0c87\u0c88\5\u01f6")
+        buf.write("\u00fc\2\u0c88\u0c89\7\5\2\2\u0c89\u0c94\3\2\2\2\u0c8a")
+        buf.write("\u0c8b\7\u00da\2\2\u0c8b\u0c8c\5\u01f6\u00fc\2\u0c8c\u0c8d")
+        buf.write("\7\u00db\2\2\u0c8d\u0c8e\5\u01f6\u00fc\2\u0c8e\u0c8f\7")
+        buf.write("\u00dc\2\2\u0c8f\u0c90\5\u01f6\u00fc\5\u0c90\u0c94\3\2")
+        buf.write("\2\2\u0c91\u0c94\7\u00de\2\2\u0c92\u0c94\7\u00dd\2\2\u0c93")
+        buf.write("\u0c6b\3\2\2\2\u0c93\u0c70\3\2\2\2\u0c93\u0c74\3\2\2\2")
+        buf.write("\u0c93\u0c78\3\2\2\2\u0c93\u0c7c\3\2\2\2\u0c93\u0c80\3")
+        buf.write("\2\2\2\u0c93\u0c84\3\2\2\2\u0c93\u0c86\3\2\2\2\u0c93\u0c8a")
+        buf.write("\3\2\2\2\u0c93\u0c91\3\2\2\2\u0c93\u0c92\3\2\2\2\u0c94")
+        buf.write("\u0ca3\3\2\2\2\u0c95\u0c96\f\13\2\2\u0c96\u0c97\7\u00df")
+        buf.write("\2\2\u0c97\u0ca2\5\u01f6\u00fc\f\u0c98\u0c99\f\n\2\2\u0c99")
+        buf.write("\u0c9a\7\u00e0\2\2\u0c9a\u0ca2\5\u01f6\u00fc\13\u0c9b")
+        buf.write("\u0c9c\f\t\2\2\u0c9c\u0c9d\7\u00e6\2\2\u0c9d\u0ca2\5\u01f6")
+        buf.write("\u00fc\n\u0c9e\u0c9f\f\b\2\2\u0c9f\u0ca0\7\u00e5\2\2\u0ca0")
+        buf.write("\u0ca2\5\u01f6\u00fc\t\u0ca1\u0c95\3\2\2\2\u0ca1\u0c98")
+        buf.write("\3\2\2\2\u0ca1\u0c9b\3\2\2\2\u0ca1\u0c9e\3\2\2\2\u0ca2")
+        buf.write("\u0ca5\3\2\2\2\u0ca3\u0ca1\3\2\2\2\u0ca3\u0ca4\3\2\2\2")
+        buf.write("\u0ca4\u01f7\3\2\2\2\u0ca5\u0ca3\3\2\2\2\u0ca6\u0ca7\b")
+        buf.write("\u00fd\1\2\u0ca7\u0ca8\7\4\2\2\u0ca8\u0ca9\5\u01f8\u00fd")
+        buf.write("\2\u0ca9\u0caa\7\5\2\2\u0caa\u0cb4\3\2\2\2\u0cab\u0cac")
+        buf.write("\7\u00da\2\2\u0cac\u0cad\5\u01f6\u00fc\2\u0cad\u0cae\7")
+        buf.write("\u00db\2\2\u0cae\u0caf\5\u01f8\u00fd\2\u0caf\u0cb0\7\u00dc")
+        buf.write("\2\2\u0cb0\u0cb1\5\u01f8\u00fd\4\u0cb1\u0cb4\3\2\2\2\u0cb2")
+        buf.write("\u0cb4\7\u01b2\2\2\u0cb3\u0ca6\3\2\2\2\u0cb3\u0cab\3\2")
+        buf.write("\2\2\u0cb3\u0cb2\3\2\2\2\u0cb4\u0cba\3\2\2\2\u0cb5\u0cb6")
+        buf.write("\f\6\2\2\u0cb6\u0cb7\7\7\2\2\u0cb7\u0cb9\5\u01f8\u00fd")
+        buf.write("\7\u0cb8\u0cb5\3\2\2\2\u0cb9\u0cbc\3\2\2\2\u0cba\u0cb8")
+        buf.write("\3\2\2\2\u0cba\u0cbb\3\2\2\2\u0cbb\u01f9\3\2\2\2\u0cbc")
+        buf.write("\u0cba\3\2\2\2\u0cbd\u0cbe\t\27\2\2\u0cbe\u01fb\3\2\2")
+        buf.write("\2\u0cbf\u0cc0\7\u00ee\2\2\u0cc0\u0cc1\5\u01fe\u0100\2")
+        buf.write("\u0cc1\u0cc2\7/\2\2\u0cc2\u0cc3\7\u00ee\2\2\u0cc3\u01fd")
+        buf.write("\3\2\2\2\u0cc4\u0cc9\b\u0100\1\2\u0cc5\u0cc6\f\3\2\2\u0cc6")
+        buf.write("\u0cc8\5\u0200\u0101\2\u0cc7\u0cc5\3\2\2\2\u0cc8\u0ccb")
+        buf.write("\3\2\2\2\u0cc9\u0cc7\3\2\2\2\u0cc9\u0cca\3\2\2\2\u0cca")
+        buf.write("\u01ff\3\2\2\2\u0ccb\u0cc9\3\2\2\2\u0ccc\u0ccd\7M\2\2")
+        buf.write("\u0ccd\u0cce\7\u01b1\2\2\u0cce\u0ccf\5\u0202\u0102\2\u0ccf")
+        buf.write("\u0cd0\7\3\2\2\u0cd0\u0cf5\3\2\2\2\u0cd1\u0cd2\7D\2\2")
+        buf.write("\u0cd2\u0cd3\7\u01b1\2\2\u0cd3\u0cd4\5\u0202\u0102\2\u0cd4")
+        buf.write("\u0cd5\7\3\2\2\u0cd5\u0cf5\3\2\2\2\u0cd6\u0cd7\7n\2\2")
+        buf.write("\u0cd7\u0cd8\7\u01b1\2\2\u0cd8\u0cd9\5\u0202\u0102\2\u0cd9")
+        buf.write("\u0cda\7\3\2\2\u0cda\u0cf5\3\2\2\2\u0cdb\u0cdc\7N\2\2")
+        buf.write("\u0cdc\u0cdd\7\u01b1\2\2\u0cdd\u0cde\5\u0202\u0102\2\u0cde")
+        buf.write("\u0cdf\7\3\2\2\u0cdf\u0cf5\3\2\2\2\u0ce0\u0ce1\7\u00ac")
+        buf.write("\2\2\u0ce1\u0ce2\7\u01b1\2\2\u0ce2\u0ce3\5\u0202\u0102")
+        buf.write("\2\u0ce3\u0ce4\7\3\2\2\u0ce4\u0cf5\3\2\2\2\u0ce5\u0ce6")
+        buf.write("\7\u00ad\2\2\u0ce6\u0ce7\7\u01b1\2\2\u0ce7\u0ce8\5\u0202")
+        buf.write("\u0102\2\u0ce8\u0ce9\7\3\2\2\u0ce9\u0cf5\3\2\2\2\u0cea")
+        buf.write("\u0ceb\7J\2\2\u0ceb\u0cec\7\u01b1\2\2\u0cec\u0ced\5\u0202")
+        buf.write("\u0102\2\u0ced\u0cee\7\3\2\2\u0cee\u0cf5\3\2\2\2\u0cef")
+        buf.write("\u0cf0\7[\2\2\u0cf0\u0cf1\7\u01b1\2\2\u0cf1\u0cf2\5\u0202")
+        buf.write("\u0102\2\u0cf2\u0cf3\7\3\2\2\u0cf3\u0cf5\3\2\2\2\u0cf4")
+        buf.write("\u0ccc\3\2\2\2\u0cf4\u0cd1\3\2\2\2\u0cf4\u0cd6\3\2\2\2")
+        buf.write("\u0cf4\u0cdb\3\2\2\2\u0cf4\u0ce0\3\2\2\2\u0cf4\u0ce5\3")
+        buf.write("\2\2\2\u0cf4\u0cea\3\2\2\2\u0cf4\u0cef\3\2\2\2\u0cf5\u0201")
+        buf.write("\3\2\2\2\u0cf6\u0cf7\7\u00f0\2\2\u0cf7\u0cf8\5\u020c\u0107")
+        buf.write("\2\u0cf8\u0cf9\5\u0210\u0109\2\u0cf9\u0d04\3\2\2\2\u0cfa")
+        buf.write("\u0cfb\7\u00f1\2\2\u0cfb\u0cfc\5\u020c\u0107\2\u0cfc\u0cfd")
+        buf.write("\5\u020e\u0108\2\u0cfd\u0d04\3\2\2\2\u0cfe\u0d04\7\u00ef")
+        buf.write("\2\2\u0cff\u0d00\7\u00ef\2\2\u0d00\u0d04\7\u01b2\2\2\u0d01")
+        buf.write("\u0d02\7\u0114\2\2\u0d02\u0d04\7\u01b1\2\2\u0d03\u0cf6")
+        buf.write("\3\2\2\2\u0d03\u0cfa\3\2\2\2\u0d03\u0cfe\3\2\2\2\u0d03")
+        buf.write("\u0cff\3\2\2\2\u0d03\u0d01\3\2\2\2\u0d04\u0203\3\2\2\2")
+        buf.write("\u0d05\u0d14\3\2\2\2\u0d06\u0d14\7\u0131\2\2\u0d07\u0d08")
+        buf.write("\7\37\2\2\u0d08\u0d14\5\f\7\2\u0d09\u0d0a\7\37\2\2\u0d0a")
+        buf.write("\u0d0b\5\f\7\2\u0d0b\u0d0c\7\u00f2\2\2\u0d0c\u0d0d\5\f")
+        buf.write("\7\2\u0d0d\u0d0e\5\f\7\2\u0d0e\u0d14\3\2\2\2\u0d0f\u0d10")
+        buf.write("\7\u00f2\2\2\u0d10\u0d11\5\f\7\2\u0d11\u0d12\5\f\7\2\u0d12")
+        buf.write("\u0d14\3\2\2\2\u0d13\u0d05\3\2\2\2\u0d13\u0d06\3\2\2\2")
+        buf.write("\u0d13\u0d07\3\2\2\2\u0d13\u0d09\3\2\2\2\u0d13\u0d0f\3")
+        buf.write("\2\2\2\u0d14\u0205\3\2\2\2\u0d15\u0d1d\3\2\2\2\u0d16\u0d17")
+        buf.write("\7\u01aa\2\2\u0d17\u0d18\5\f\7\2\u0d18\u0d19\7\u0179\2")
+        buf.write("\2\u0d19\u0d1a\5\f\7\2\u0d1a\u0d1b\5\u0208\u0105\2\u0d1b")
+        buf.write("\u0d1d\3\2\2\2\u0d1c\u0d15\3\2\2\2\u0d1c\u0d16\3\2\2\2")
+        buf.write("\u0d1d\u0207\3\2\2\2\u0d1e\u0d21\3\2\2\2\u0d1f\u0d21\7")
+        buf.write("\u01ae\2\2\u0d20\u0d1e\3\2\2\2\u0d20\u0d1f\3\2\2\2\u0d21")
+        buf.write("\u0209\3\2\2\2\u0d22\u0d25\3\2\2\2\u0d23\u0d25\7\u01ac")
+        buf.write("\2\2\u0d24\u0d22\3\2\2\2\u0d24\u0d23\3\2\2\2\u0d25\u020b")
+        buf.write("\3\2\2\2\u0d26\u0d2c\3\2\2\2\u0d27\u0d28\7\u00f2\2\2\u0d28")
+        buf.write("\u0d29\5\f\7\2\u0d29\u0d2a\5\f\7\2\u0d2a\u0d2c\3\2\2\2")
+        buf.write("\u0d2b\u0d26\3\2\2\2\u0d2b\u0d27\3\2\2\2\u0d2c\u020d\3")
+        buf.write("\2\2\2\u0d2d\u0d30\3\2\2\2\u0d2e\u0d30\7\u01b0\2\2\u0d2f")
+        buf.write("\u0d2d\3\2\2\2\u0d2f\u0d2e\3\2\2\2\u0d30\u020f\3\2\2\2")
+        buf.write("\u0d31\u0d34\3\2\2\2\u0d32\u0d34\5\f\7\2\u0d33\u0d31\3")
+        buf.write("\2\2\2\u0d33\u0d32\3\2\2\2\u0d34\u0211\3\2\2\2\u0d35\u0d3a")
+        buf.write("\3\2\2\2\u0d36\u0d37\5\u0214\u010b\2\u0d37\u0d38\5\u0212")
+        buf.write("\u010a\2\u0d38\u0d3a\3\2\2\2\u0d39\u0d35\3\2\2\2\u0d39")
+        buf.write("\u0d36\3\2\2\2\u0d3a\u0213\3\2\2\2\u0d3b\u0d40\7\u017c")
+        buf.write("\2\2\u0d3c\u0d3d\7\u0087\2\2\u0d3d\u0d40\5\u020a\u0106")
+        buf.write("\2\u0d3e\u0d40\7\u01ab\2\2\u0d3f\u0d3b\3\2\2\2\u0d3f\u0d3c")
+        buf.write("\3\2\2\2\u0d3f\u0d3e\3\2\2\2\u0d40\u0215\3\2\2\2\u0d41")
+        buf.write("\u0d6a\3\2\2\2\u0d42\u0d43\7J\2\2\u0d43\u0d44\7\u01b1")
+        buf.write("\2\2\u0d44\u0d6a\5\u0218\u010d\2\u0d45\u0d46\7\u0162\2")
+        buf.write("\2\u0d46\u0d47\5\f\7\2\u0d47\u0d48\7\u0179\2\2\u0d48\u0d49")
+        buf.write("\5\f\7\2\u0d49\u0d4a\5\u021a\u010e\2\u0d4a\u0d6a\3\2\2")
+        buf.write("\2\u0d4b\u0d4c\7\23\2\2\u0d4c\u0d6a\7\u01b0\2\2\u0d4d")
+        buf.write("\u0d4e\7\u00f2\2\2\u0d4e\u0d4f\5\f\7\2\u0d4f\u0d50\5\f")
+        buf.write("\7\2\u0d50\u0d51\5\u0204\u0103\2\u0d51\u0d6a\3\2\2\2\u0d52")
+        buf.write("\u0d53\7\u0132\2\2\u0d53\u0d6a\5\f\7\2\u0d54\u0d55\7\u0132")
+        buf.write("\2\2\u0d55\u0d56\5\f\7\2\u0d56\u0d57\7\u00f2\2\2\u0d57")
+        buf.write("\u0d58\5\f\7\2\u0d58\u0d59\5\f\7\2\u0d59\u0d6a\3\2\2\2")
+        buf.write("\u0d5a\u0d5b\7\u01a0\2\2\u0d5b\u0d5c\5\f\7\2\u0d5c\u0d5d")
+        buf.write("\7\u0179\2\2\u0d5d\u0d5e\5\f\7\2\u0d5e\u0d5f\5\u0206\u0104")
+        buf.write("\2\u0d5f\u0d6a\3\2\2\2\u0d60\u0d61\7\u01a7\2\2\u0d61\u0d6a")
+        buf.write("\5\f\7\2\u0d62\u0d63\7\u01a1\2\2\u0d63\u0d64\5\f\7\2\u0d64")
+        buf.write("\u0d65\7\u01a8\2\2\u0d65\u0d66\5\f\7\2\u0d66\u0d67\7\u01a7")
+        buf.write("\2\2\u0d67\u0d68\5\f\7\2\u0d68\u0d6a\3\2\2\2\u0d69\u0d41")
+        buf.write("\3\2\2\2\u0d69\u0d42\3\2\2\2\u0d69\u0d45\3\2\2\2\u0d69")
+        buf.write("\u0d4b\3\2\2\2\u0d69\u0d4d\3\2\2\2\u0d69\u0d52\3\2\2\2")
+        buf.write("\u0d69\u0d54\3\2\2\2\u0d69\u0d5a\3\2\2\2\u0d69\u0d60\3")
+        buf.write("\2\2\2\u0d69\u0d62\3\2\2\2\u0d6a\u0217\3\2\2\2\u0d6b\u0d6e")
+        buf.write("\3\2\2\2\u0d6c\u0d6e\7\u0092\2\2\u0d6d\u0d6b\3\2\2\2\u0d6d")
+        buf.write("\u0d6c\3\2\2\2\u0d6e\u0219\3\2\2\2\u0d6f\u0d72\3\2\2\2")
+        buf.write("\u0d70\u0d72\7\u01a3\2\2\u0d71\u0d6f\3\2\2\2\u0d71\u0d70")
+        buf.write("\3\2\2\2\u0d72\u021b\3\2\2\2\u0d73\u0d77\3\2\2\2\u0d74")
+        buf.write("\u0d75\7J\2\2\u0d75\u0d77\7\u01b1\2\2\u0d76\u0d73\3\2")
+        buf.write("\2\2\u0d76\u0d74\3\2\2\2\u0d77\u021d\3\2\2\2\u0d78\u0d79")
+        buf.write("\7J\2\2\u0d79\u0d7a\7\u01b1\2\2\u0d7a\u021f\3\2\2\2\u0d7b")
+        buf.write("\u0d7c\7\u00f9\2\2\u0d7c\u0d7d\5\f\7\2\u0d7d\u0d7e\5\f")
+        buf.write("\7\2\u0d7e\u0d7f\7\3\2\2\u0d7f\u0221\3\2\2\2\u0d80\u0d81")
+        buf.write("\7\u00fa\2\2\u0d81\u0d82\5\f\7\2\u0d82\u0d83\7\3\2\2\u0d83")
+        buf.write("\u0223\3\2\2\2\u0d84\u0d85\7\u00fd\2\2\u0d85\u0d86\5\f")
+        buf.write("\7\2\u0d86\u0d87\7\3\2\2\u0d87\u0225\3\2\2\2\u0d88\u0d89")
+        buf.write("\7\u00fc\2\2\u0d89\u0d8a\5\f\7\2\u0d8a\u0d8b\7\3\2\2\u0d8b")
+        buf.write("\u0227\3\2\2\2\u0d8c\u0d8d\7\u00ff\2\2\u0d8d\u0d8e\5\f")
+        buf.write("\7\2\u0d8e\u0d8f\7\3\2\2\u0d8f\u0d90\5\u022c\u0117\2\u0d90")
+        buf.write("\u0d91\5\u022a\u0116\2\u0d91\u0d92\7\3\2\2\u0d92\u0229")
+        buf.write("\3\2\2\2\u0d93\u0d94\7/\2\2\u0d94\u0d95\7\u00ff\2\2\u0d95")
+        buf.write("\u022b\3\2\2\2\u0d96\u0d97\b\u0117\1\2\u0d97\u0d98\5\u022e")
+        buf.write("\u0118\2\u0d98\u0d9d\3\2\2\2\u0d99\u0d9a\f\3\2\2\u0d9a")
+        buf.write("\u0d9c\5\u022e\u0118\2\u0d9b\u0d99\3\2\2\2\u0d9c\u0d9f")
+        buf.write("\3\2\2\2\u0d9d\u0d9b\3\2\2\2\u0d9d\u0d9e\3\2\2\2\u0d9e")
+        buf.write("\u022d\3\2\2\2\u0d9f\u0d9d\3\2\2\2\u0da0\u0da1\7\u0100")
+        buf.write("\2\2\u0da1\u0da2\5\f\7\2\u0da2\u0da3\7\3\2\2\u0da3\u0da6")
+        buf.write("\3\2\2\2\u0da4\u0da6\5\u0230\u0119\2\u0da5\u0da0\3\2\2")
+        buf.write("\2\u0da5\u0da4\3\2\2\2\u0da6\u022f\3\2\2\2\u0da7\u0da8")
+        buf.write("\7\u0101\2\2\u0da8\u0da9\5\u0232\u011a\2\u0da9\u0daa\7")
+        buf.write("\3\2\2\u0daa\u0dab\5\u0234\u011b\2\u0dab\u0231\3\2\2\2")
+        buf.write("\u0dac\u0dad\b\u011a\1\2\u0dad\u0dae\5\f\7\2\u0dae\u0db3")
+        buf.write("\3\2\2\2\u0daf\u0db0\f\3\2\2\u0db0\u0db2\5\f\7\2\u0db1")
+        buf.write("\u0daf\3\2\2\2\u0db2\u0db5\3\2\2\2\u0db3\u0db1\3\2\2\2")
+        buf.write("\u0db3\u0db4\3\2\2\2\u0db4\u0233\3\2\2\2\u0db5\u0db3\3")
+        buf.write("\2\2\2\u0db6\u0db7\b\u011b\1\2\u0db7\u0db8\5\u0236\u011c")
+        buf.write("\2\u0db8\u0dbd\3\2\2\2\u0db9\u0dba\f\3\2\2\u0dba\u0dbc")
+        buf.write("\5\u0236\u011c\2\u0dbb\u0db9\3\2\2\2\u0dbc\u0dbf\3\2\2")
+        buf.write("\2\u0dbd\u0dbb\3\2\2\2\u0dbd\u0dbe\3\2\2\2\u0dbe\u0235")
+        buf.write("\3\2\2\2\u0dbf\u0dbd\3\2\2\2\u0dc0\u0dc1\7\u0102\2\2\u0dc1")
+        buf.write("\u0dc2\5\f\7\2\u0dc2\u0dc3\7\3\2\2\u0dc3\u0dc4\7\u00fe")
+        buf.write("\2\2\u0dc4\u0dc5\5\u0238\u011d\2\u0dc5\u0dc6\7\3\2\2\u0dc6")
+        buf.write("\u0237\3\2\2\2\u0dc7\u0dc8\b\u011d\1\2\u0dc8\u0dc9\5\f")
+        buf.write("\7\2\u0dc9\u0dce\3\2\2\2\u0dca\u0dcb\f\3\2\2\u0dcb\u0dcd")
+        buf.write("\5\f\7\2\u0dcc\u0dca\3\2\2\2\u0dcd\u0dd0\3\2\2\2\u0dce")
+        buf.write("\u0dcc\3\2\2\2\u0dce\u0dcf\3\2\2\2\u0dcf\u0239\3\2\2\2")
+        buf.write("\u0dd0\u0dce\3\2\2\2\u0dd1\u0dd2\7\u00fb\2\2\u0dd2\u0dd3")
+        buf.write("\5\f\7\2\u0dd3\u0dd4\7\3\2\2\u0dd4\u0dd5\5\u023e\u0120")
+        buf.write("\2\u0dd5\u0dd6\5\u023c\u011f\2\u0dd6\u0dd7\7\3\2\2\u0dd7")
+        buf.write("\u023b\3\2\2\2\u0dd8\u0dd9\7/\2\2\u0dd9\u0dda\7\u00fb")
+        buf.write("\2\2\u0dda\u023d\3\2\2\2\u0ddb\u0ddc\b\u0120\1\2\u0ddc")
+        buf.write("\u0ddd\5\u0240\u0121\2\u0ddd\u0de2\3\2\2\2\u0dde\u0ddf")
+        buf.write("\f\3\2\2\u0ddf\u0de1\5\u0240\u0121\2\u0de0\u0dde\3\2\2")
+        buf.write("\2\u0de1\u0de4\3\2\2\2\u0de2\u0de0\3\2\2\2\u0de2\u0de3")
+        buf.write("\3\2\2\2\u0de3\u023f\3\2\2\2\u0de4\u0de2\3\2\2\2\u0de5")
+        buf.write("\u0de6\7\u0100\2\2\u0de6\u0de7\5\f\7\2\u0de7\u0de8\7\3")
+        buf.write("\2\2\u0de8\u0deb\3\2\2\2\u0de9\u0deb\5\u0242\u0122\2\u0dea")
+        buf.write("\u0de5\3\2\2\2\u0dea\u0de9\3\2\2\2\u0deb\u0241\3\2\2\2")
+        buf.write("\u0dec\u0ded\7\u0101\2\2\u0ded\u0dee\5\u0244\u0123\2\u0dee")
+        buf.write("\u0def\7\3\2\2\u0def\u0df0\5\u0246\u0124\2\u0df0\u0243")
+        buf.write("\3\2\2\2\u0df1\u0df2\b\u0123\1\2\u0df2\u0df3\5\f\7\2\u0df3")
+        buf.write("\u0df8\3\2\2\2\u0df4\u0df5\f\3\2\2\u0df5\u0df7\5\f\7\2")
+        buf.write("\u0df6\u0df4\3\2\2\2\u0df7\u0dfa\3\2\2\2\u0df8\u0df6\3")
+        buf.write("\2\2\2\u0df8\u0df9\3\2\2\2\u0df9\u0245\3\2\2\2\u0dfa\u0df8")
+        buf.write("\3\2\2\2\u0dfb\u0dfc\b\u0124\1\2\u0dfc\u0dfd\5\u0248\u0125")
+        buf.write("\2\u0dfd\u0e02\3\2\2\2\u0dfe\u0dff\f\3\2\2\u0dff\u0e01")
+        buf.write("\5\u0248\u0125\2\u0e00\u0dfe\3\2\2\2\u0e01\u0e04\3\2\2")
+        buf.write("\2\u0e02\u0e00\3\2\2\2\u0e02\u0e03\3\2\2\2\u0e03\u0247")
+        buf.write("\3\2\2\2\u0e04\u0e02\3\2\2\2\u0e05\u0e06\7\u0102\2\2\u0e06")
+        buf.write("\u0e07\5\f\7\2\u0e07\u0e08\7\3\2\2\u0e08\u0e09\7\u0103")
+        buf.write("\2\2\u0e09\u0e0a\5\u024a\u0126\2\u0e0a\u0e0b\7\3\2\2\u0e0b")
+        buf.write("\u0249\3\2\2\2\u0e0c\u0e0d\b\u0126\1\2\u0e0d\u0e0e\5\f")
+        buf.write("\7\2\u0e0e\u0e13\3\2\2\2\u0e0f\u0e10\f\3\2\2\u0e10\u0e12")
+        buf.write("\5\f\7\2\u0e11\u0e0f\3\2\2\2\u0e12\u0e15\3\2\2\2\u0e13")
+        buf.write("\u0e11\3\2\2\2\u0e13\u0e14\3\2\2\2\u0e14\u024b\3\2\2\2")
+        buf.write("\u0e15\u0e13\3\2\2\2\u0e16\u0e17\7\u0105\2\2\u0e17\u0e18")
+        buf.write("\5\f\7\2\u0e18\u0e19\7\3\2\2\u0e19\u024d\3\2\2\2\u0e1a")
+        buf.write("\u0e1b\7\u0104\2\2\u0e1b\u0e1c\5\f\7\2\u0e1c\u0e1d\7\3")
+        buf.write("\2\2\u0e1d\u024f\3\2\2\2\u0e1e\u0e1f\7\u0106\2\2\u0e1f")
         buf.write("\u0e20\5\f\7\2\u0e20\u0e21\7\3\2\2\u0e21\u0251\3\2\2\2")
         buf.write("\u0e22\u0e23\7\u0133\2\2\u0e23\u0e24\7\u01b0\2\2\u0e24")
         buf.write("\u0e25\7\3\2\2\u0e25\u0253\3\2\2\2\u0e26\u0e27\7\u0134")
@@ -3029,9 +3030,9 @@ class LEFParser ( Parser ):
     COMMENT=433
     SPACE=434
 
-    def __init__(self, input:TokenStream):
-        super().__init__(input)
-        self.checkVersion("4.5.1")
+    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.7.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -3182,18 +3183,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_end_library)
         try:
             self.state = 614
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.EOF]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_END]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 612
                 self.match(LEFParser.K_END)
                 self.state = 613
                 self.match(LEFParser.K_LIBRARY)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -3382,10 +3384,12 @@ class LEFParser ( Parser ):
 
 
     def lef_rule(self):
+
         localctx = LEFParser.Lef_ruleContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_lef_rule)
         try:
             self.state = 655
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -3842,6 +3846,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_case_sensitivity)
         try:
             self.state = 677
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -3907,6 +3912,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_wireextension)
         try:
             self.state = 685
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -4163,6 +4169,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_EUCLIDEAN or _la==LEFParser.K_MAXXY):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -4210,6 +4217,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_OBS or _la==LEFParser.K_PIN):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -4257,6 +4265,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_OFF or _la==LEFParser.K_ON):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -4507,6 +4516,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 40, self.RULE_units_rule)
         try:
             self.state = 763
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_TIME]:
                 self.enterOuterAlt(localctx, 1)
@@ -4518,7 +4528,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 727
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_CAPACITANCE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 729
@@ -4529,7 +4539,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 732
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_RESISTANCE]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 734
@@ -4540,7 +4550,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 737
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_POWER]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 739
@@ -4551,7 +4561,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 742
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_CURRENT]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 744
@@ -4562,7 +4572,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 747
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_VOLTAGE]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 749
@@ -4573,7 +4583,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 752
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_DATABASE]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 754
@@ -4584,7 +4594,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 757
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_FREQUENCY]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 759
@@ -4595,7 +4605,7 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.NUMBER)
                 self.state = 762
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -4694,6 +4704,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 44, self.RULE_start_layer)
         try:
             self.state = 773
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -4755,6 +4766,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 46, self.RULE_end_layer)
         try:
             self.state = 779
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -5236,6 +5248,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 50, self.RULE_layer_option)
         try:
             self.state = 1155
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -6163,16 +6176,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 52, self.RULE_layer_arraySpacing_long)
         try:
             self.state = 1159
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_WIDTH, LEFParser.K_CUTSPACING]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_LONGARRAY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1158
                 self.match(LEFParser.K_LONGARRAY)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6217,18 +6231,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 54, self.RULE_layer_arraySpacing_width)
         try:
             self.state = 1164
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_CUTSPACING]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1162
                 self.match(LEFParser.K_WIDTH)
                 self.state = 1163
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6274,18 +6289,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 56, self.RULE_layer_arraySpacing_arraycuts)
         try:
             self.state = 1170
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_ARRAYCUTS]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1167
                 self.layer_arraySpacing_arraycut()
                 self.state = 1168
                 self.layer_arraySpacing_arraycuts()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6426,6 +6442,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 60, self.RULE_sp_options)
         try:
             self.state = 1202
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_PARALLELRUNLENGTH]:
                 self.enterOuterAlt(localctx, 1)
@@ -6443,7 +6460,7 @@ class LEFParser ( Parser ):
                 self.int_number_list(0)
                 self.state = 1183
                 self.layer_sp_parallel_widths(0)
-
+                pass
             elif token in [LEFParser.K_TWOWIDTHS]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1185
@@ -6460,7 +6477,7 @@ class LEFParser ( Parser ):
                 self.int_number_list(0)
                 self.state = 1191
                 self.layer_sp_TwoWidths()
-
+                pass
             elif token in [LEFParser.K_INFLUENCE]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1193
@@ -6479,7 +6496,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1200
                 self.layer_sp_influence_widths(0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6525,18 +6542,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 62, self.RULE_layer_spacingtable_opts)
         try:
             self.state = 1208
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WITHIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1205
                 self.layer_spacingtable_opt()
                 self.state = 1206
                 self.layer_spacingtable_opts()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6635,21 +6653,22 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 66, self.RULE_layer_enclosure_type_opt)
         try:
             self.state = 1218
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_ABOVE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1216
                 self.match(LEFParser.K_ABOVE)
-
+                pass
             elif token in [LEFParser.K_BELOW]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1217
                 self.match(LEFParser.K_BELOW)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6701,11 +6720,12 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 68, self.RULE_layer_enclosure_width_opt)
         try:
             self.state = 1227
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1221
@@ -6714,14 +6734,14 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1223
                 self.layer_enclosure_width_except_opt()
-
+                pass
             elif token in [LEFParser.K_LENGTH]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1225
                 self.match(LEFParser.K_LENGTH)
                 self.state = 1226
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6766,18 +6786,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 70, self.RULE_layer_enclosure_width_except_opt)
         try:
             self.state = 1232
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_EXCEPTEXTRACUT]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1230
                 self.match(LEFParser.K_EXCEPTEXTRACUT)
                 self.state = 1231
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6822,18 +6843,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 72, self.RULE_layer_preferenclosure_width_opt)
         try:
             self.state = 1237
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1235
                 self.match(LEFParser.K_WIDTH)
                 self.state = 1236
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6878,18 +6900,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 74, self.RULE_layer_minimumcut_within)
         try:
             self.state = 1242
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0, LEFParser.K_FROMABOVE, LEFParser.K_FROMBELOW, LEFParser.K_LENGTH]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WITHIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1240
                 self.match(LEFParser.K_WITHIN)
                 self.state = 1241
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6933,21 +6956,22 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 76, self.RULE_layer_minimumcut_from)
         try:
             self.state = 1247
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0, LEFParser.K_LENGTH]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_FROMABOVE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1245
                 self.match(LEFParser.K_FROMABOVE)
-
+                pass
             elif token in [LEFParser.K_FROMBELOW]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1246
                 self.match(LEFParser.K_FROMBELOW)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -6998,11 +7022,12 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 78, self.RULE_layer_minimumcut_length)
         try:
             self.state = 1255
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_LENGTH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1250
@@ -7013,7 +7038,7 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.K_WITHIN)
                 self.state = 1253
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -7130,26 +7155,27 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 82, self.RULE_layer_minstep_option)
         try:
             self.state = 1270
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_STEP, LEFParser.K_INSIDECORNER, LEFParser.K_OUTSIDECORNER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1265
                 self.layer_minstep_type()
-
+                pass
             elif token in [LEFParser.K_LENGTHSUM]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1266
                 self.match(LEFParser.K_LENGTHSUM)
                 self.state = 1267
                 self.int_number()
-
+                pass
             elif token in [LEFParser.K_MAXEDGES]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1268
                 self.match(LEFParser.K_MAXEDGES)
                 self.state = 1269
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -7202,6 +7228,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_STEP or _la==LEFParser.K_INSIDECORNER or _la==LEFParser.K_OUTSIDECORNER):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -7255,12 +7282,13 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 86, self.RULE_layer_antenna_pwl)
         try:
             self.state = 1282
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1274
                 self.int_number()
-
+                pass
             elif token in [LEFParser.K_PWL]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1275
@@ -7275,7 +7303,7 @@ class LEFParser ( Parser ):
                 self.layer_diffusion_ratios(0)
                 self.state = 1280
                 self.match(LEFParser.T__2)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -7421,16 +7449,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 92, self.RULE_layer_antenna_duo)
         try:
             self.state = 1296
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_DIFFUSEONLY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1295
                 self.match(LEFParser.K_DIFFUSEONLY)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -7483,6 +7512,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 297)) & ~0x3f) == 0 and ((1 << (_la - 297)) & ((1 << (LEFParser.K_AVERAGE - 297)) | (1 << (LEFParser.K_PEAK - 297)) | (1 << (LEFParser.K_RMS - 297)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -7614,11 +7644,12 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 98, self.RULE_ac_layer_table_opt)
         try:
             self.state = 1321
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_TABLEENTRIES]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_CUTAREA]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1311
@@ -7629,7 +7660,7 @@ class LEFParser ( Parser ):
                 self.number_list(0)
                 self.state = 1314
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1316
@@ -7640,7 +7671,7 @@ class LEFParser ( Parser ):
                 self.int_number_list(0)
                 self.state = 1319
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -7939,6 +7970,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 108, self.RULE_layer_prop)
         try:
             self.state = 1360
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -8371,6 +8403,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_CUT or _la==LEFParser.K_OVERLAP or _la==LEFParser.K_ROUTING or _la==LEFParser.K_MASTERSLICE or _la==LEFParser.K_VIRTUAL or _la==LEFParser.K_IMPLANT):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -8424,6 +8457,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_HORIZONTAL or _la==LEFParser.K_VERTICAL or _la==LEFParser.K_DIAG45 or _la==LEFParser.K_DIAG135):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -8466,18 +8500,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 126, self.RULE_layer_minen_width)
         try:
             self.state = 1414
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1412
                 self.match(LEFParser.K_WIDTH)
                 self.state = 1413
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -8533,6 +8568,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 367)) & ~0x3f) == 0 and ((1 << (_la - 367)) & ((1 << (LEFParser.K_OXIDE1 - 367)) | (1 << (LEFParser.K_OXIDE2 - 367)) | (1 << (LEFParser.K_OXIDE3 - 367)) | (1 << (LEFParser.K_OXIDE4 - 367)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -8692,18 +8728,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 134, self.RULE_layer_sp_TwoWidths)
         try:
             self.state = 1434
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1431
                 self.layer_sp_TwoWidth()
                 self.state = 1432
                 self.layer_sp_TwoWidths()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -8810,18 +8847,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 138, self.RULE_layer_sp_TwoWidthsPRL)
         try:
             self.state = 1445
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_PRL]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1443
                 self.match(LEFParser.K_PRL)
                 self.state = 1444
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -9002,6 +9040,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 144, self.RULE_maxstack_via)
         try:
             self.state = 1473
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,41,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -9168,6 +9207,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 150, self.RULE_start_via)
         try:
             self.state = 1492
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,42,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -9431,6 +9471,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 156, self.RULE_via_viarule_option)
         try:
             self.state = 1546
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_ROWCOL]:
                 self.enterOuterAlt(localctx, 1)
@@ -9442,7 +9483,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1529
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_ORIGIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1531
@@ -9453,7 +9494,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1534
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_OFFSET]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1536
@@ -9468,7 +9509,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1541
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_PATTERN]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1543
@@ -9477,7 +9518,7 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.T_STRING)
                 self.state = 1545
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -9523,17 +9564,18 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 158, self.RULE_via_option)
         try:
             self.state = 1550
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_VIARULE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1548
                 self.via_viarule()
-
+                pass
             elif token in [LEFParser.K_FOREIGN, LEFParser.K_LAYER, LEFParser.K_RESISTANCE, LEFParser.K_TOPOFSTACKONLY, LEFParser.K_PROPERTY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1549
                 self.via_other_options()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -9707,17 +9749,18 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 164, self.RULE_via_other_option)
         try:
             self.state = 1574
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_FOREIGN]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1563
                 self.via_foreign()
-
+                pass
             elif token in [LEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1564
                 self.via_layer_rule()
-
+                pass
             elif token in [LEFParser.K_RESISTANCE]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1565
@@ -9726,7 +9769,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1567
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_PROPERTY]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1569
@@ -9735,12 +9778,12 @@ class LEFParser ( Parser ):
                 self.via_prop_list(0)
                 self.state = 1571
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_TOPOFSTACKONLY]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1573
                 self.match(LEFParser.K_TOPOFSTACKONLY)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -9857,6 +9900,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 168, self.RULE_via_name_value_pair)
         try:
             self.state = 1592
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,49,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -9929,6 +9973,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 170, self.RULE_via_foreign)
         try:
             self.state = 1610
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,50,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -10103,6 +10148,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 178)) & ~0x3f) == 0 and ((1 << (_la - 178)) & ((1 << (LEFParser.K_N - 178)) | (1 << (LEFParser.K_S - 178)) | (1 << (LEFParser.K_E - 178)) | (1 << (LEFParser.K_W - 178)) | (1 << (LEFParser.K_FN - 178)) | (1 << (LEFParser.K_FS - 178)) | (1 << (LEFParser.K_FE - 178)) | (1 << (LEFParser.K_FW - 178)) | (1 << (LEFParser.K_R0 - 178)) | (1 << (LEFParser.K_R90 - 178)) | (1 << (LEFParser.K_R180 - 178)) | (1 << (LEFParser.K_R270 - 178)) | (1 << (LEFParser.K_MX - 178)) | (1 << (LEFParser.K_MY - 178)) | (1 << (LEFParser.K_MXR90 - 178)) | (1 << (LEFParser.K_MYR90 - 178)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -10327,6 +10373,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 182, self.RULE_via_geometry)
         try:
             self.state = 1646
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_RECT]:
                 self.enterOuterAlt(localctx, 1)
@@ -10340,7 +10387,7 @@ class LEFParser ( Parser ):
                 self.pt()
                 self.state = 1636
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_POLYGON]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1638
@@ -10357,7 +10404,7 @@ class LEFParser ( Parser ):
                 self.otherPts(0)
                 self.state = 1644
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -10619,16 +10666,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 192, self.RULE_viarule_generate_default)
         try:
             self.state = 1669
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_DEFAULT]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1668
                 self.match(LEFParser.K_DEFAULT)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -10737,16 +10785,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 196, self.RULE_opt_viarule_props)
         try:
             self.state = 1683
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_END]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_PROPERTY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1682
                 self.viarule_props(0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -10921,6 +10970,7 @@ class LEFParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1707
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,57,self._ctx)
             if la_ == 1:
                 self.state = 1700
@@ -11323,6 +11373,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 214, self.RULE_viarule_layer_option)
         try:
             self.state = 1783
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,61,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11722,6 +11773,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 226, self.RULE_spacing)
         try:
             self.state = 1818
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,63,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -11834,18 +11886,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 230, self.RULE_maskColor)
         try:
             self.state = 1825
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__1, LEFParser.K_ITERATE, LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_MASK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1823
                 self.match(LEFParser.K_MASK)
                 self.state = 1824
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -12452,6 +12505,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 254, self.RULE_end_nd_rule)
         try:
             self.state = 1880
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,67,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -12505,6 +12559,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 256, self.RULE_nd_hardspacing)
         try:
             self.state = 1885
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,68,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -12647,42 +12702,43 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 260, self.RULE_nd_rule)
         try:
             self.state = 1902
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1895
                 self.nd_layer()
-
+                pass
             elif token in [LEFParser.K_VIA]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1896
                 self.via()
-
+                pass
             elif token in [LEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1897
                 self.spacing_rule()
-
+                pass
             elif token in [LEFParser.K_PROPERTY]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1898
                 self.nd_prop()
-
+                pass
             elif token in [LEFParser.K_USEVIA]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1899
                 self.usevia()
-
+                pass
             elif token in [LEFParser.K_USEVIARULE]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 1900
                 self.useviarule()
-
+                pass
             elif token in [LEFParser.K_MINCUTS]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 1901
                 self.mincuts()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -12934,6 +12990,7 @@ class LEFParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1929
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,71,self._ctx)
             if la_ == 1:
                 self.state = 1922
@@ -13183,6 +13240,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 276, self.RULE_nd_layer_stmt)
         try:
             self.state = 1981
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 1)
@@ -13192,7 +13250,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1957
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_WIREEXTENSION]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1959
@@ -13201,7 +13259,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1961
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_RESISTANCE]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1963
@@ -13212,7 +13270,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1966
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_CAPACITANCE]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1968
@@ -13223,7 +13281,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1971
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_EDGECAPACITANCE]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 1973
@@ -13232,7 +13290,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1975
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_DIAGWIDTH]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 1977
@@ -13241,7 +13299,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 1979
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -13500,27 +13558,28 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 286, self.RULE_site_option)
         try:
             self.state = 2005
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_SIZE]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2001
                 self.site_size()
-
+                pass
             elif token in [LEFParser.K_SYMMETRY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2002
                 self.site_symmetry_statement()
-
+                pass
             elif token in [LEFParser.K_CLASS]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2003
                 self.site_class()
-
+                pass
             elif token in [LEFParser.K_ROWPATTERN]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2004
                 self.site_rowpattern_statement()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -13627,6 +13686,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 290, self.RULE_site_class)
         try:
             self.state = 2022
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,77,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -13820,6 +13880,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 176)) & ~0x3f) == 0 and ((1 << (_la - 176)) & ((1 << (LEFParser.K_X - 176)) | (1 << (LEFParser.K_Y - 176)) | (1 << (LEFParser.K_R90 - 176)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -14019,6 +14080,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 304, self.RULE_pt)
         try:
             self.state = 2061
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
@@ -14026,7 +14088,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 2054
                 self.int_number()
-
+                pass
             elif token in [LEFParser.T__1]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2056
@@ -14037,7 +14099,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 2059
                 self.match(LEFParser.T__2)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -14368,6 +14430,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 314, self.RULE_macro_option)
         try:
             self.state = 2109
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,82,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -14736,6 +14799,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 176)) & ~0x3f) == 0 and ((1 << (_la - 176)) & ((1 << (LEFParser.K_X - 176)) | (1 << (LEFParser.K_Y - 176)) | (1 << (LEFParser.K_R90 - 176)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -14783,6 +14847,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 324, self.RULE_macro_name_value_pair)
         try:
             self.state = 2141
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,85,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -14938,6 +15003,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 328, self.RULE_class_type)
         try:
             self.state = 2168
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,86,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -15100,6 +15166,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 63)) & ~0x3f) == 0 and ((1 << (_la - 63)) & ((1 << (LEFParser.K_INOUT - 63)) | (1 << (LEFParser.K_INPUT - 63)) | (1 << (LEFParser.K_OUTPUT - 63)) | (1 << (LEFParser.K_POWER - 63)))) != 0) or _la==LEFParser.K_SPACER or _la==LEFParser.K_AREAIO):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -15159,6 +15226,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_FEEDTHRU or ((((_la - 141)) & ~0x3f) == 0 and ((1 << (_la - 141)) & ((1 << (LEFParser.K_SPACER - 141)) | (1 << (LEFParser.K_TIEHIGH - 141)) | (1 << (LEFParser.K_TIELOW - 141)))) != 0) or _la==LEFParser.K_ANTENNACELL or _la==LEFParser.K_WELLTAP):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -15218,6 +15286,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_BOTTOMLEFT or _la==LEFParser.K_BOTTOMRIGHT or ((((_la - 113)) & ~0x3f) == 0 and ((1 << (_la - 113)) & ((1 << (LEFParser.K_POST - 113)) | (1 << (LEFParser.K_PRE - 113)) | (1 << (LEFParser.K_TOPLEFT - 113)) | (1 << (LEFParser.K_TOPRIGHT - 113)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -15362,6 +15431,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 340, self.RULE_macro_source)
         try:
             self.state = 2194
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,87,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -15534,6 +15604,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 346, self.RULE_macro_foreign)
         try:
             self.state = 2220
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,88,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -15754,6 +15825,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 354, self.RULE_macro_site)
         try:
             self.state = 2241
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,89,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -16012,6 +16084,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 364, self.RULE_start_macro_pin)
         try:
             self.state = 2265
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,90,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -16095,6 +16168,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 366, self.RULE_end_macro_pin)
         try:
             self.state = 2275
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,91,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -16450,6 +16524,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 370, self.RULE_macro_pin_option)
         try:
             self.state = 2511
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,93,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17086,6 +17161,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 367)) & ~0x3f) == 0 and ((1 << (_la - 367)) & ((1 << (LEFParser.K_OXIDE1 - 367)) | (1 << (LEFParser.K_OXIDE2 - 367)) | (1 << (LEFParser.K_OXIDE3 - 367)) | (1 << (LEFParser.K_OXIDE4 - 367)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -17200,6 +17276,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 376, self.RULE_pin_name_value_pair)
         try:
             self.state = 2531
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,95,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17278,6 +17355,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 378, self.RULE_electrical_direction)
         try:
             self.state = 2549
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,96,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17412,11 +17490,12 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 382, self.RULE_macro_port_class_option)
         try:
             self.state = 2558
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_LAYER, LEFParser.K_PATH, LEFParser.K_POLYGON, LEFParser.K_RECT, LEFParser.K_VIA, LEFParser.K_WIDTH]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_CLASS]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2554
@@ -17425,7 +17504,7 @@ class LEFParser ( Parser ):
                 self.class_type()
                 self.state = 2556
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -17487,6 +17566,7 @@ class LEFParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LEFParser.K_ANALOG) | (1 << LEFParser.K_CLOCK) | (1 << LEFParser.K_DATA) | (1 << LEFParser.K_GROUND))) != 0) or _la==LEFParser.K_POWER or _la==LEFParser.K_SIGNAL):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -17540,6 +17620,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_INPUT or _la==LEFParser.K_OUTPUT or _la==LEFParser.K_START or _la==LEFParser.K_STOP):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -17584,26 +17665,27 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 388, self.RULE_pin_shape)
         try:
             self.state = 2568
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_ABUTMENT]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2565
                 self.match(LEFParser.K_ABUTMENT)
-
+                pass
             elif token in [LEFParser.K_RING]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2566
                 self.match(LEFParser.K_RING)
-
+                pass
             elif token in [LEFParser.K_FEEDTHRU]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2567
                 self.match(LEFParser.K_FEEDTHRU)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -17754,6 +17836,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 392, self.RULE_geometry)
         try:
             self.state = 2630
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,99,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -17992,16 +18075,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 396, self.RULE_layer_exceptpgnet)
         try:
             self.state = 2642
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0, LEFParser.K_DESIGNRULEWIDTH, LEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_EXCEPTPGNET]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2641
                 self.match(LEFParser.K_EXCEPTPGNET)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -18049,25 +18133,26 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 398, self.RULE_layer_spacing)
         try:
             self.state = 2649
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_SPACING]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2645
                 self.match(LEFParser.K_SPACING)
                 self.state = 2646
                 self.int_number()
-
+                pass
             elif token in [LEFParser.K_DESIGNRULEWIDTH]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2647
                 self.match(LEFParser.K_DESIGNRULEWIDTH)
                 self.state = 2648
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -18271,6 +18356,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 406, self.RULE_via_placement)
         try:
             self.state = 2677
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,104,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -18426,6 +18512,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 410, self.RULE_sitePattern)
         try:
             self.state = 2704
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,105,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -18526,6 +18613,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 412, self.RULE_trackPattern)
         try:
             self.state = 2738
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,106,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -18757,6 +18845,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 418, self.RULE_gcellPattern)
         try:
             self.state = 2764
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_X]:
                 self.enterOuterAlt(localctx, 1)
@@ -18772,7 +18861,7 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.K_STEP)
                 self.state = 2755
                 self.int_number()
-
+                pass
             elif token in [LEFParser.K_Y]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2757
@@ -18787,7 +18876,7 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.K_STEP)
                 self.state = 2762
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -18836,6 +18925,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 420, self.RULE_macro_obs)
         try:
             self.state = 2773
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,109,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19604,6 +19694,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 444, self.RULE_timing_option)
         try:
             self.state = 2946
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,113,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -19937,6 +20028,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 292)) & ~0x3f) == 0 and ((1 << (_la - 292)) & ((1 << (LEFParser.K_MPWH - 292)) | (1 << (LEFParser.K_MPWL - 292)) | (1 << (LEFParser.K_PERIOD - 292)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -19990,6 +20082,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_SETUP or _la==LEFParser.K_HOLD or _la==LEFParser.K_RECOVERY or _la==LEFParser.K_SKEW):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -20040,6 +20133,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 286)) & ~0x3f) == 0 and ((1 << (_la - 286)) & ((1 << (LEFParser.K_ANYEDGE - 286)) | (1 << (LEFParser.K_POSEDGE - 286)) | (1 << (LEFParser.K_NEGEDGE - 286)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -20090,6 +20184,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 286)) & ~0x3f) == 0 and ((1 << (_la - 286)) & ((1 << (LEFParser.K_ANYEDGE - 286)) | (1 << (LEFParser.K_POSEDGE - 286)) | (1 << (LEFParser.K_NEGEDGE - 286)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -20137,6 +20232,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_DELAY or _la==LEFParser.K_TRANSITIONTIME):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -20364,6 +20460,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 462, self.RULE_slew_spec)
         try:
             self.state = 2998
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,116,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -20447,6 +20544,7 @@ class LEFParser ( Parser ):
             if not(_la==LEFParser.K_FALL or _la==LEFParser.K_RISE):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -20497,6 +20595,7 @@ class LEFParser ( Parser ):
             if not(((((_la - 68)) & ~0x3f) == 0 and ((1 << (_la - 68)) & ((1 << (LEFParser.K_INVERT - 68)) | (1 << (LEFParser.K_NONINVERT - 68)) | (1 << (LEFParser.K_NONUNATE - 68)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -20929,6 +21028,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 480, self.RULE_array_rule)
         try:
             self.state = 3074
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_SITE]:
                 self.enterOuterAlt(localctx, 1)
@@ -20938,7 +21038,7 @@ class LEFParser ( Parser ):
                 self.sitePattern()
                 self.state = 3044
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_CANPLACE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3046
@@ -20947,7 +21047,7 @@ class LEFParser ( Parser ):
                 self.sitePattern()
                 self.state = 3048
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_CANNOTOCCUPY]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3050
@@ -20956,7 +21056,7 @@ class LEFParser ( Parser ):
                 self.sitePattern()
                 self.state = 3052
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_TRACKS]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 3054
@@ -20965,7 +21065,7 @@ class LEFParser ( Parser ):
                 self.trackPattern()
                 self.state = 3056
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_FLOORPLAN]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 3058
@@ -20976,7 +21076,7 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.K_END)
                 self.state = 3061
                 self.match(LEFParser.T_STRING)
-
+                pass
             elif token in [LEFParser.K_GCELLGRID]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 3063
@@ -20985,7 +21085,7 @@ class LEFParser ( Parser ):
                 self.gcellPattern()
                 self.state = 3065
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_DEFAULTCAP]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 3067
@@ -20998,12 +21098,12 @@ class LEFParser ( Parser ):
                 self.match(LEFParser.K_END)
                 self.state = 3071
                 self.match(LEFParser.K_DEFAULTCAP)
-
+                pass
             elif token in [LEFParser.K_DEFINE, LEFParser.K_DEFINES, LEFParser.K_DEFINEB]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 3073
                 self.def_statement()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -21160,6 +21260,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 486, self.RULE_floorplan_element)
         try:
             self.state = 3095
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_CANPLACE]:
                 self.enterOuterAlt(localctx, 1)
@@ -21169,7 +21270,7 @@ class LEFParser ( Parser ):
                 self.sitePattern()
                 self.state = 3089
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_CANNOTOCCUPY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3091
@@ -21178,7 +21279,7 @@ class LEFParser ( Parser ):
                 self.sitePattern()
                 self.state = 3093
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -21470,6 +21571,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 496, self.RULE_def_statement)
         try:
             self.state = 3141
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_DEFINE]:
                 self.enterOuterAlt(localctx, 1)
@@ -21483,7 +21585,7 @@ class LEFParser ( Parser ):
                 self.expression(0)
                 self.state = 3127
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_DEFINES]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3129
@@ -21496,7 +21598,7 @@ class LEFParser ( Parser ):
                 self.s_expr(0)
                 self.state = 3133
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_DEFINEB]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3135
@@ -21509,7 +21611,7 @@ class LEFParser ( Parser ):
                 self.b_expr(0)
                 self.state = 3139
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -21574,13 +21676,14 @@ class LEFParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3158
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__5]:
                 self.state = 3144
                 self.match(LEFParser.T__5)
                 self.state = 3145
                 self.expression(4)
-
+                pass
             elif token in [LEFParser.T__1]:
                 self.state = 3146
                 self.match(LEFParser.T__1)
@@ -21588,7 +21691,7 @@ class LEFParser ( Parser ):
                 self.expression(0)
                 self.state = 3148
                 self.match(LEFParser.T__2)
-
+                pass
             elif token in [LEFParser.K_IF]:
                 self.state = 3150
                 self.match(LEFParser.K_IF)
@@ -21601,12 +21704,12 @@ class LEFParser ( Parser ):
                 self.state = 3154
                 self.match(LEFParser.K_ELSE)
                 self.state = 3155
-                self.expression(0)
-
+                self.expression(2)
+                pass
             elif token in [LEFParser.NUMBER]:
                 self.state = 3157
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -21620,6 +21723,7 @@ class LEFParser ( Parser ):
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 3172
+                    self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,126,self._ctx)
                     if la_ == 1:
                         localctx = LEFParser.ExpressionContext(self, _parentctx, _parentState)
@@ -21692,16 +21796,6 @@ class LEFParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def K_NOT(self):
-            return self.getToken(LEFParser.K_NOT, 0)
-
-        def b_expr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(LEFParser.B_exprContext)
-            else:
-                return self.getTypedRuleContext(LEFParser.B_exprContext,i)
-
-
         def expression(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(LEFParser.ExpressionContext)
@@ -21724,6 +21818,16 @@ class LEFParser ( Parser ):
                 return self.getTypedRuleContexts(LEFParser.S_exprContext)
             else:
                 return self.getTypedRuleContext(LEFParser.S_exprContext,i)
+
+
+        def K_NOT(self):
+            return self.getToken(LEFParser.K_NOT, 0)
+
+        def b_expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(LEFParser.B_exprContext)
+            else:
+                return self.getTypedRuleContext(LEFParser.B_exprContext,i)
 
 
         def K_IF(self):
@@ -21770,66 +21874,67 @@ class LEFParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3217
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,128,self._ctx)
             if la_ == 1:
                 self.state = 3178
-                self.match(LEFParser.K_NOT)
+                self.expression(0)
                 self.state = 3179
-                self.b_expr(5)
+                self.relop()
+                self.state = 3180
+                self.expression(0)
                 pass
 
             elif la_ == 2:
-                self.state = 3180
-                self.expression(0)
-                self.state = 3181
-                self.relop()
                 self.state = 3182
+                self.expression(0)
+                self.state = 3183
+                self.match(LEFParser.K_AND)
+                self.state = 3184
                 self.expression(0)
                 pass
 
             elif la_ == 3:
-                self.state = 3184
-                self.expression(0)
-                self.state = 3185
-                self.match(LEFParser.K_AND)
                 self.state = 3186
+                self.expression(0)
+                self.state = 3187
+                self.match(LEFParser.K_OR)
+                self.state = 3188
                 self.expression(0)
                 pass
 
             elif la_ == 4:
-                self.state = 3188
-                self.expression(0)
-                self.state = 3189
-                self.match(LEFParser.K_OR)
                 self.state = 3190
-                self.expression(0)
+                self.s_expr(0)
+                self.state = 3191
+                self.relop()
+                self.state = 3192
+                self.s_expr(0)
                 pass
 
             elif la_ == 5:
-                self.state = 3192
-                self.s_expr(0)
-                self.state = 3193
-                self.relop()
                 self.state = 3194
+                self.s_expr(0)
+                self.state = 3195
+                self.match(LEFParser.K_AND)
+                self.state = 3196
                 self.s_expr(0)
                 pass
 
             elif la_ == 6:
-                self.state = 3196
-                self.s_expr(0)
-                self.state = 3197
-                self.match(LEFParser.K_AND)
                 self.state = 3198
+                self.s_expr(0)
+                self.state = 3199
+                self.match(LEFParser.K_OR)
+                self.state = 3200
                 self.s_expr(0)
                 pass
 
             elif la_ == 7:
-                self.state = 3200
-                self.s_expr(0)
-                self.state = 3201
-                self.match(LEFParser.K_OR)
                 self.state = 3202
-                self.s_expr(0)
+                self.match(LEFParser.K_NOT)
+                self.state = 3203
+                self.b_expr(5)
                 pass
 
             elif la_ == 8:
@@ -21853,7 +21958,7 @@ class LEFParser ( Parser ):
                 self.state = 3212
                 self.match(LEFParser.K_ELSE)
                 self.state = 3213
-                self.b_expr(0)
+                self.b_expr(3)
                 pass
 
             elif la_ == 10:
@@ -21877,6 +21982,7 @@ class LEFParser ( Parser ):
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 3231
+                    self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,129,self._ctx)
                     if la_ == 1:
                         localctx = LEFParser.B_exprContext(self, _parentctx, _parentState)
@@ -21995,6 +22101,7 @@ class LEFParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3249
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__1]:
                 self.state = 3237
@@ -22003,7 +22110,7 @@ class LEFParser ( Parser ):
                 self.s_expr(0)
                 self.state = 3239
                 self.match(LEFParser.T__2)
-
+                pass
             elif token in [LEFParser.K_IF]:
                 self.state = 3241
                 self.match(LEFParser.K_IF)
@@ -22016,12 +22123,12 @@ class LEFParser ( Parser ):
                 self.state = 3245
                 self.match(LEFParser.K_ELSE)
                 self.state = 3246
-                self.s_expr(0)
-
+                self.s_expr(2)
+                pass
             elif token in [LEFParser.QSTRING]:
                 self.state = 3248
                 self.match(LEFParser.QSTRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22106,6 +22213,7 @@ class LEFParser ( Parser ):
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LEFParser.T__3) | (1 << LEFParser.T__8) | (1 << LEFParser.T__9))) != 0) or ((((_la - 221)) & ~0x3f) == 0 and ((1 << (_la - 221)) & ((1 << (LEFParser.K_EQ - 221)) | (1 << (LEFParser.K_NE - 221)) | (1 << (LEFParser.K_LE - 221)) | (1 << (LEFParser.K_LT - 221)) | (1 << (LEFParser.K_GE - 221)) | (1 << (LEFParser.K_GT - 221)))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
+                self._errHandler.reportMatch(self)
                 self.consume()
         except RecognitionException as re:
             localctx.exception = re
@@ -22292,6 +22400,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 510, self.RULE_prop_stmt)
         try:
             self.state = 3314
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_LIBRARY]:
                 self.enterOuterAlt(localctx, 1)
@@ -22303,7 +22412,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3277
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_COMPONENTPIN]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3279
@@ -22314,7 +22423,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3282
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_PIN]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3284
@@ -22325,7 +22434,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3287
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_MACRO]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 3289
@@ -22336,7 +22445,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3292
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_VIA]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 3294
@@ -22347,7 +22456,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3297
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_VIARULE]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 3299
@@ -22358,7 +22467,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3302
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 3304
@@ -22369,7 +22478,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3307
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_NONDEFAULTRULE]:
                 self.enterOuterAlt(localctx, 8)
                 self.state = 3309
@@ -22380,7 +22489,7 @@ class LEFParser ( Parser ):
                 self.prop_define()
                 self.state = 3312
                 self.match(LEFParser.T__0)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22448,6 +22557,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 512, self.RULE_prop_define)
         try:
             self.state = 3329
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,135,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -22542,6 +22652,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 514, self.RULE_opt_range_second)
         try:
             self.state = 3345
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,136,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -22638,11 +22749,12 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 516, self.RULE_opt_endofline)
         try:
             self.state = 3354
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_PARALLELEDGE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3348
@@ -22655,7 +22767,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 3352
                 self.opt_endofline_twoedges()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22696,16 +22808,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 518, self.RULE_opt_endofline_twoedges)
         try:
             self.state = 3358
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_TWOEDGES]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3357
                 self.match(LEFParser.K_TWOEDGES)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22746,16 +22859,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 520, self.RULE_opt_samenetPGonly)
         try:
             self.state = 3362
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0, LEFParser.K_AREA, LEFParser.K_LAYER, LEFParser.K_SAMENET, LEFParser.K_RANGE, LEFParser.K_LENGTHTHRESHOLD, LEFParser.K_ADJACENTCUTS, LEFParser.K_CENTERTOCENTER, LEFParser.K_ENDOFLINE, LEFParser.K_ENDOFNOTCHWIDTH, LEFParser.K_NOTCHLENGTH, LEFParser.K_PARALLELOVERLAP]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_PGONLY]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3361
                 self.match(LEFParser.K_PGONLY)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22803,11 +22917,12 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 522, self.RULE_opt_def_range)
         try:
             self.state = 3369
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0, LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_RANGE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3365
@@ -22816,7 +22931,7 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 3367
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22857,16 +22972,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 524, self.RULE_opt_def_value)
         try:
             self.state = 3373
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3372
                 self.match(LEFParser.NUMBER)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22908,16 +23024,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 526, self.RULE_opt_def_dvalue)
         try:
             self.state = 3377
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.NUMBER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3376
                 self.int_number()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -22963,18 +23080,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 528, self.RULE_layer_spacing_opts)
         try:
             self.state = 3383
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0, LEFParser.K_AREA, LEFParser.K_LAYER, LEFParser.K_RANGE, LEFParser.K_LENGTHTHRESHOLD, LEFParser.K_ADJACENTCUTS, LEFParser.K_ENDOFLINE, LEFParser.K_ENDOFNOTCHWIDTH, LEFParser.K_NOTCHLENGTH]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_SAMENET, LEFParser.K_CENTERTOCENTER, LEFParser.K_PARALLELOVERLAP]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3380
                 self.layer_spacing_opt()
                 self.state = 3381
                 self.layer_spacing_opts()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23025,24 +23143,25 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 530, self.RULE_layer_spacing_opt)
         try:
             self.state = 3389
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_CENTERTOCENTER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 3385
                 self.match(LEFParser.K_CENTERTOCENTER)
-
+                pass
             elif token in [LEFParser.K_SAMENET]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3386
                 self.match(LEFParser.K_SAMENET)
                 self.state = 3387
                 self.opt_samenetPGonly()
-
+                pass
             elif token in [LEFParser.K_PARALLELOVERLAP]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3388
                 self.match(LEFParser.K_PARALLELOVERLAP)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23139,6 +23258,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 532, self.RULE_layer_spacing_cut_routing)
         try:
             self.state = 3431
+            self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,145,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
@@ -23287,16 +23407,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 534, self.RULE_spacing_cut_layer_opt)
         try:
             self.state = 3435
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_STACK]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3434
                 self.match(LEFParser.K_STACK)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23337,16 +23458,17 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 536, self.RULE_opt_adjacentcuts_exceptsame)
         try:
             self.state = 3439
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_EXCEPTSAMEPGNET]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3438
                 self.match(LEFParser.K_EXCEPTSAMEPGNET)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23390,18 +23512,19 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 538, self.RULE_opt_layer_name)
         try:
             self.state = 3444
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.T__0]:
                 self.enterOuterAlt(localctx, 1)
 
-
+                pass
             elif token in [LEFParser.K_LAYER]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3442
                 self.match(LEFParser.K_LAYER)
                 self.state = 3443
                 self.match(LEFParser.T_STRING)
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -23859,6 +23982,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 556, self.RULE_noise_table_entry)
         try:
             self.state = 3491
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_EDGERATE]:
                 self.enterOuterAlt(localctx, 1)
@@ -23868,12 +23992,12 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 3488
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_OUTPUTRESISTANCE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3490
                 self.output_resistance_entry()
-
+                pass
             else:
                 raise NoViableAltException(self)
 
@@ -24408,6 +24532,7 @@ class LEFParser ( Parser ):
         self.enterRule(localctx, 574, self.RULE_correction_table_item)
         try:
             self.state = 3560
+            self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LEFParser.K_EDGERATE]:
                 self.enterOuterAlt(localctx, 1)
@@ -24417,12 +24542,12 @@ class LEFParser ( Parser ):
                 self.int_number()
                 self.state = 3557
                 self.match(LEFParser.T__0)
-
+                pass
             elif token in [LEFParser.K_OUTPUTRESISTANCE]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3559
                 self.output_list()
-
+                pass
             else:
                 raise NoViableAltException(self)
 

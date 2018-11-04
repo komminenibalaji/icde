@@ -16,7 +16,7 @@ from pprint import pprint
 
 def read_def(library,deffile):
 
-    sys.setrecursionlimit(1000000)
+    sys.setrecursionlimit(32000)
 
     deffs = FileStream(deffile)
     logging.info("Lexing DEF file")
@@ -24,7 +24,7 @@ def read_def(library,deffile):
     stream = CommonTokenStream(lexer)
     logging.info("Parsing DEF file")
     parser = DEFParser(stream)
-    tree = parser.def_file()
+    tree = cProfile.run(parser.def_file())
 
     # pprint(Trees.toStringTree(tree, None, parser))    
 
@@ -39,6 +39,8 @@ def read_def(library,deffile):
 
 
 def read_lef(library,leffile,technology=0):
+
+    sys.setrecursionlimit(32000)
 
     logging.info("Reading LEF file " + leffile)
 
